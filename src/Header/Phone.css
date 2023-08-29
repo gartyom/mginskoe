@@ -1,0 +1,8 @@
+.Phone{
+    height: 100%;
+    width: var(--phone-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+}

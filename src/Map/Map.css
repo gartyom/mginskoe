@@ -1,0 +1,30 @@
+.Map{
+    height: 650px;
+    scroll-margin-top: calc(var(--header-height) + 10px);
+}
+
+
+.Map-content{
+    width: 100%;
+    max-width: 1600px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Map-title{
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+   
+}
+
+.Map-container{
+    height: 600px;
+    width: 100%;
+    position: relative;
+    background-color: rgb(243, 243, 243);
+}

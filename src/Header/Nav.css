@@ -1,0 +1,24 @@
+.Nav{
+    width: var(--nav-width);
+}
+
+.Nav-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.Nav-item{
+    cursor: pointer;
+}
+
+.Nav-itemLink{
+    text-decoration: none;
+    color: var(--header-text-color);
+}
+

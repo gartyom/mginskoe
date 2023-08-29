@@ -1,0 +1,31 @@
+.Gallery{
+    width: 100%;
+    height: fit-content;
+    scroll-margin-top: calc(var(--header-height) + 10px);
+}
+
+.Gallery-content{
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.Gallery-card{
+    width: 50vmin;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.Gallery-img{
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit:contain;
+}

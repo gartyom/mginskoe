@@ -1,0 +1,10 @@
+.Footer{
+    width: 100%;
+    height: 300px;
+}
+
+.Footer-content{
+    width: 100%;
+    max-width: 1600px;
+    height: 100%;
+}
