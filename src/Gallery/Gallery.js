@@ -3,7 +3,7 @@ import './Gallery.css'
 export default function Gallery(){
     return (
         <div className="Gallery" id='Gallery'>
-            <div className='Gallery-title'>Галлерея</div>
+            <div className='Gallery-title'>Галерея</div>
             <div className="Gallery-content">
                 <div className='Gallery-card'>
                     <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_1.jpg'}></img>
