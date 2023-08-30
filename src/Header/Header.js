@@ -12,6 +12,7 @@ export default function Header(){
         HeaderIcon.current.classList.toggle('open')
         Nav.current.classList.toggle('open')
         Header.current.classList.toggle('open')
+        // 
     }
 
     return (
