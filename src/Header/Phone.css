@@ -1,8 +1,18 @@
 .Phone{
-    height: 100%;
+    height: fit-content;
     width: var(--phone-width);
+    height: 48px;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 17px;
+}
+
+@media screen and (max-width: 450px) {
+    .Phone{
+        width: 150px;
+    }
 }

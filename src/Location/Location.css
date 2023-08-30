@@ -2,7 +2,7 @@
     width: 100%;
     height: 500px;
     scroll-margin-top: calc(var(--header-height) + 10px);
-    max-width: 1600px;
+    max-width: var(--content-max-width);
     margin-left: auto;
     margin-right: auto;
 }
@@ -20,6 +20,7 @@
 
 .Location-mapContainer{
     width: calc(50% - 8px);
+    height: 400px;
 }
 
 .Location-text{
@@ -27,17 +28,18 @@
 }
 
 .Location-title{
-    font-size: 40px;
+    font-size: calc(18px + 2vmin);
     font-weight: 700;
 }
 
 .Location-description{
-    font-size: 25px;
+    font-size: calc(13px + 1vmin);
     font-weight: 300;
     margin-top: 10px;
 }
 
 .Location-mapFrame{
+   
     height: 100%;
     width: 100%;
 }
@@ -54,4 +56,33 @@
     background-repeat: no-repeat;
     padding-left: 30px;
     margin-top: 10px;
+}
+
+@media screen and (max-width:800px) {
+    .Location-content{
+        flex-direction: column;
+    }
+
+    .Location{
+        height: fit-content;
+    }
+
+    .Location-mapContainer{
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Location-text{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .Location-listItem{
+        background-size: 16px;
+        background-repeat: no-repeat;
+        padding-left: 22px;
+    }
+    
 }

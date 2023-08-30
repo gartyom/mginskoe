@@ -1,20 +1,21 @@
 .Card{
     align-self: center;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 15px;
     width: 100%;
-    max-width: 270px;
-    height: 200px;
+    max-width: 300px;
+    height: calc(155px + 3vmax);
+    max-height: 200px;
     text-align: center;
     border-radius: 20px;
     background-color: white;
     align-self: flex-start;
-    
 }
 
 .Card-imageContainer{
     width: 100%;
-    height: 70px;
+    height: calc(35px + 2vmax);
+    max-height: 70px;
 }
 
 .Card-image{
@@ -27,15 +28,18 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 24px;
+    margin-bottom: 5px;
+    font-size: calc(11px + 1vmin);
     font-weight: 600;
 }
 
 .Card-info{
     height: fit-content;
-    font-size: 18px;
+    font-size: calc(8px + 1vmin);
     margin-bottom: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Card-description{
@@ -44,6 +48,19 @@
     font-size: 16px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media screen and (max-width:800px) {
+    .Card{
+        height: calc(135px + 3vmax);
+    }
+
+    .Card-title{
+
+        margin-top: 15px;
+
+    }
+    
 }
 
 /* .Card:hover{

@@ -1,11 +1,11 @@
 .About{
    color: var(--main-text-color);
-   height: 600px;
+   height: var(--section-height);
    scroll-margin-top: calc(var(--header-height) + 10px);
 }
 
 .About-content{
-    max-width: 1600px;
+    max-width: var(--content-max-width);
     height: 100%;
     width: 100%;
     margin-left: auto;
@@ -27,14 +27,13 @@
 
 .About-title{
     color: white;
-    font-size: 50px;
+    font-size: calc(11px + 2vmin);
     font-weight: 600;
-    
 }
 
 .About-description{
     text-align: center;
-    font-size: 25px;
+    font-size: calc(8px + 1.5vmin);
     z-index: 99;
     color: white;
     position: relative;
@@ -47,4 +46,10 @@
 
 .About-text{
     margin-top: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .About{
+        height: 400px;
+     }
 }

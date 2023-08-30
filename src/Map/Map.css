@@ -17,9 +17,11 @@
 
 .Map-title{
     position: relative;
-    font-size: 40px;
+    font-size: calc(18px + 2vmin);
     font-weight: 700;
-   
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Map-container{
