@@ -1,18 +1,20 @@
 .Map{
-    height: 650px;
+    height: fit-content;
     scroll-margin-top: calc(var(--header-height) + 10px);
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 .Map-content{
-    width: 100%;
-    max-width: 1600px;
-    height: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 
 .Map-title{
@@ -25,8 +27,26 @@
 }
 
 .Map-container{
+    margin-top: 10px;
     height: 600px;
     width: 100%;
+    max-width: 100vw;
     position: relative;
-    background-color: rgb(243, 243, 243);
+    align-items: center;
+    overflow: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
 }
+
+.Map-image{
+    width: auto;
+    height: 100%;
+    object-fit:contain;
+    image-rendering: auto;
+    position: absolute;
+}
+
+.Map-container::-webkit-scrollbar {
+    display: none;
+  }
+  

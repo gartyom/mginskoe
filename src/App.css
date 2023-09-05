@@ -20,8 +20,8 @@ body{
 }
 
 :root{
-  --header-background-color: rgba(29, 31, 29, 0.8);
-  --header-text-color: rgb(251, 253, 251);
+  --header-background-color: rgba(255, 255, 255, 0.8);
+  --header-text-color: #1d1f1d;
 
   --header-height: 48px;
 

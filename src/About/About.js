@@ -35,7 +35,7 @@ export default function About(){
     return (
         <div className="About" id='About'>
             <div className='About-content'>
-                <video className='About-background' loop autoPlay muted>
+                <video className='About-background' loop autoPlay={true} muted>
                     <source src={process.env.PUBLIC_URL + '/videos/flyvideo.mp4'} type="video/mp4" ></source>
                 </video>
                 <div className='About-description'>

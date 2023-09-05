@@ -67,7 +67,6 @@
     }
 
     .Nav-item{
-        border-bottom: 1px solid var(--nav-border-bottom);
         padding-bottom: 10px;
         padding-top: 10px;
         width: 100%;
