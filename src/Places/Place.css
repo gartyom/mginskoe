@@ -1,0 +1,12 @@
+.Place{
+    width: 100%;
+    height: calc(200px + 20vmin);
+    background-color: rgb(145, 145, 145);
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .Place{
+        height: calc(150px + 20vmin);
+    }
+}

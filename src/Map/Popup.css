@@ -1,0 +1,16 @@
+.Popup{
+   z-index: 99;
+   position: absolute;
+   border: 1px solid red;
+}
+
+.Popup-content{
+    background-color: rgba(255, 255, 255, 1);
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+}
+
+.Popup-title{
+    width: 200px;
+}

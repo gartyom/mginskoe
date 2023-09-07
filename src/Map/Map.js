@@ -1,19 +1,145 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import './Map.css'
+import './Popup.css'
 
 export default function Map(){
+    const popup = useRef(null)
+    const [price, setPrice] = useState(0)
+    const [plotNumber, setPlotNumber] = useState(0)
+
     const [plotInfo, setPlotInfo] = useState({
-        "2182": {
-            price: 400000
-        },
-        "2093": {
-            price: 209300
-        }
+        "2182":{price:999999},
+        "2183":{price:999999},
+        "2099":{price:999999},
+        "2098":{price:999999},
+        "2184":{price:999999},
+        "2097":{price:999999},
+        "2185":{price:999999},
+        "2096":{price:999999},
+        "2187":{price:999999}, 
+        "2095":{price:999999},
+        "2188":{price:999999},
+        "2094":{price:999999},
+        "2189":{price:999999},
+        "2093":{price:999999},
+        "2190":{price:999999}, 
+        "2091":{price:999999}, 
+        "2090":{price:999999}, 
+        "2191":{price:999999}, 
+        "2192":{price:999999}, 
+        "2089":{price:999999}, 
+        "2193":{price:999999}, 
+        "2088":{price:999999}, 
+        "2169":{price:999999}, 
+        "2168":{price:999999}, 
+        "2167":{price:999999}, 
+        "2166":{price:999999}, 
+        "2165":{price:999999}, 
+        "2163":{price:999999},
+        "2162":{price:999999}, 
+        "2161":{price:999999}, 
+        "2160":{price:999999}, 
+        "2159":{price:999999}, 
+        "2158":{price:999999}, 
+        "2157":{price:999999},
+        "2156":{price:999999}, 
+        "2155":{price:999999}, 
+        "2154":{price:999999}, 
+        "2151":{price:999999}, 
+        "2152":{price:999999},
+        "2150":{price:999999},
+        "2149":{price:999999}, 
+        "2147":{price:999999},
+        "2148":{price:999999},
+        "2146":{price:999999}, 
+        "2145":{price:999999}, 
+        "2144":{price:999999}, 
+        "2143":{price:999999}, 
+        "2141":{price:999999}, 
+        "2140":{price:999999},
+        "2138":{price:999999}, 
+        "2139":{price:999999},
+        "2137":{price:999999}, 
+        "2135":{price:999999}, 
+        "2136":{price:999999},
+        "2134":{price:999999}, 
+        "2133":{price:999999},
+        "2132":{price:999999},
+        "2130":{price:999999}, 
+        "2123":{price:999999}, 
+        "2124":{price:999999}, 
+        "2125":{price:999999},
+        "2126":{price:999999}, 
+        "2127":{price:999999}, 
+        "2128":{price:999999},
+        "2129":{price:999999}, 
+        "2122":{price:999999},
+        "2121":{price:999999}, 
+        "2119":{price:999999},
+        "2118":{price:999999},
+        "2117":{price:999999}, 
+        "2116":{price:999999}, 
+        "2115":{price:999999}, 
+        "2114":{price:999999}, 
+        "2113":{price:999999}, 
+        "2103":{price:999999}, 
+        "2092":{price:999999}, 
+        "2081":{price:999999}, 
+        "2197":{price:999999}, 
+        "2186":{price:999999}, 
+        "2175":{price:999999},
+        "2164":{price:999999}, 
+        "2153":{price:999999}, 
+        "2142":{price:999999}, 
+        "2131":{price:999999}, 
+        "2120":{price:999999}, 
+        "2169":{price:999999}, 
+        "2087":{price:999999}, 
+        "2194":{price:999999}, 
+        "2195":{price:999999},
+        "2086":{price:999999}, 
+        "2196":{price:999999}, 
+        "2085":{price:999999}, 
+        "2198":{price:999999}, 
+        "2084":{price:999999}, 
+        "2199":{price:999999}, 
+        "2083":{price:999999}, 
+        "2200":{price:999999}, 
+        "2082":{price:999999}, 
+        "2201":{price:999999}, 
+        "2202":{price:999999}, 
+        "2207":{price:999999}, 
+        "2206":{price:999999}, 
+        "2205":{price:999999}, 
+        "2204":{price:999999}, 
+        "2203":{price:999999}, 
+        "2181":{price:999999},
+        "2180":{price:999999},
+        "2179":{price:999999}, 
+        "2170":{price:999999}, 
+        "2178":{price:999999}, 
+        "2171":{price:999999}, 
+        "2177":{price:999999}, 
+        "2172":{price:999999}, 
+        "2176":{price:999999}, 
+        "2174":{price:999999},
+        "2173":{price:999999},
     })
 
     function handleMapClick(event){
-        let id = event.target.getAttribute('data-idx')
-        console.log(plotInfo[id])
+        if (event.target.tagName == 'path'){
+            let id = event.target.getAttribute('data-idx')
+            const pathBBox = event.target.getBBox();
+            setPlotNumber(id)
+            setPrice(plotInfo[id].price)
+            if (window.matchMedia("(min-width: 550px)").matches) {
+                popup.current.style.left = Math.round(pathBBox.x + pathBBox.width/2) + 'px'
+                popup.current.style.top = Math.round(pathBBox.y + pathBBox.height/2) + 'px'
+            } else {
+                popup.current.style.left = Math.round((pathBBox.x + pathBBox.width/2)*(5/7)) + 'px'
+                popup.current.style.top = Math.round((pathBBox.y + pathBBox.height/2)*(5/7)) + 'px'
+            }
+        }
     }
 
     return (
@@ -24,6 +150,12 @@ export default function Map(){
                     <div className='Map-imageWrapper'>
                         <img className='Map-image' src={process.env.PUBLIC_URL + '/images/Map.jpg'} draggable="false"></img>
                         <img className="Map-numbers" src={process.env.PUBLIC_URL + '/images/numbers.png'}></img>
+                        <div className='Map-popUp Popup' ref={popup}>
+                            <div className='Popup-content'>
+                                <div className='Popup-title'>Участок №{plotNumber}</div>
+                                <div className='Popup-price'>Цена: {price} руб.</div>
+                            </div>
+                        </div>
                         <svg viewBox="0 0 1600 700" className='Map-svgContainer' onClick={handleMapClick}>
                             <path data-idx="2182" d="M 312.701 351.305 L 300.956 361.895 L 301.341 431.018 L 360.837 415.037 L 359.49 339.367 L 312.701 351.305 Z"></path>
                             <path data-idx="2183" d="M 360.272 339.018 L 361.808 414.81 L 426.138 396.667 L 421.49 323.853 L 360.272 339.018 Z"></path>

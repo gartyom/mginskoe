@@ -1,16 +1,22 @@
 .Places{
     height: fit-content;
     scroll-margin-top: calc(var(--header-height) + 11px);
-}
- 
-.Places-content{
-    max-width: var(--content-max-width);
-    height: 100%;
+    max-width: 1600px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
-    position: relative;
+    color: #1b1f1b;
+}
+ 
+.Places-content{
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
 }
 
 .Places-title{
@@ -21,4 +27,12 @@
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .Places-content{
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
 }

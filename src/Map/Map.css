@@ -30,11 +30,10 @@
     margin-top: 10px;
     height: 700px;
     width: 100%;
-    overflow-y: hidden;
     max-width: 1600px;
     position: relative;
     align-items: center;
-    overflow: scroll;
+    overflow-x: scroll;
     -ms-overflow-style: none;  
     scrollbar-width: none; 
 }
@@ -62,7 +61,7 @@
 }
 
 .Map-numbers{
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 path{
@@ -83,13 +82,15 @@ path:hover{
     height: 700px;
 }
 
+
+
 @media screen and (max-width: 550px) {
     .Map-svgContainer{
-        height: 400px;
+        height: 500px;
     }
 
     .Map-container{
-        height: 400px;
+        height: 500px;
     }
 }
   
