@@ -10,7 +10,6 @@
     z-index: 9999;
     color: var(--header-text-color);
     transition: background-color 0.5s;
-    border-bottom: 1px solid black;
 }
 
 .Header-content{
@@ -34,7 +33,7 @@
 }
 
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 900px) {
     .Header.open{
         background-color: rgb(255, 255, 255);
         transition: all 1s;

@@ -1,0 +1,24 @@
+.Places{
+    height: fit-content;
+    scroll-margin-top: calc(var(--header-height) + 11px);
+}
+ 
+.Places-content{
+    max-width: var(--content-max-width);
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.Places-title{
+    position: relative;
+    font-size: calc(18px + 2vmin);
+    font-weight: 700;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}

@@ -31,7 +31,10 @@ export default function Header(){
                             <a className='Nav-itemLink' href='#Map' onClick={toggleHeader}>Карта</a>
                         </li>
                         <li className="Nav-item">
-                            <a className='Nav-itemLink' href='#Location' onClick={toggleHeader}>Расположение</a>
+                            <a className='Nav-itemLink' href='#Location' onClick={toggleHeader}>Как добраться</a>
+                        </li>
+                        <li className="Nav-item">
+                            <a className='Nav-itemLink' href='#Places' onClick={toggleHeader}>Что рядом</a>
                         </li>
                         <li className="Nav-item">
                             <a className='Nav-itemLink' href='#Gallery' onClick={toggleHeader}>Галерея</a>

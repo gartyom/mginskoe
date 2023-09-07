@@ -7,6 +7,7 @@ import Infrastructure from './Infrastructure/infrastructure';
 import Route from './Location/Location';
 import Gallery from './Gallery/Gallery';
 import Footer from './Footer/Footer';
+import Places from './Places/Places'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           </div>
           <Map></Map>
           <Route></Route>
+          <Places></Places>
           <Gallery></Gallery>
           <Footer></Footer>
         </div>

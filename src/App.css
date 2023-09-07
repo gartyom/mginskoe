@@ -44,6 +44,7 @@ body{
 }
 
 .App-content{
+  color: var(--main-text-color);
   display: flex;
   flex-direction: column;
   --gap: 40px;

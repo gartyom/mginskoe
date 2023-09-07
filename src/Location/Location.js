@@ -6,7 +6,7 @@ export default function Route(){
         <div className="Location" id='Location'>
             <div className="Location-content">
                 <div className='Location-text'>
-                    <div className='Location-title'>Расположение</div>
+                    <div className='Location-title'>Как добраться</div>
                     <div className='Location-description'>
                         Участки из новой нарезки в Кировском районе Ленинградской области: 
                         <ul className='Location-list'>
