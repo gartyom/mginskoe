@@ -35,11 +35,11 @@
 .Location-description{
     font-size: calc(13px + 1vmin);
     font-weight: 300;
-    margin-top: 45px;
+    margin-top: 55px;
 }
 
 .Location-mapFrame{
-   
+   margin-top: 10px;
     height: 100%;
     width: 100%;
 }
@@ -83,6 +83,10 @@
         background-size: 16px;
         background-repeat: no-repeat;
         padding-left: 22px;
+    }
+
+    .Location-description{
+        margin-top: 10px;
     }
     
 }
