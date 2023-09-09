@@ -4,16 +4,15 @@ import './Popup.css'
 
 export default function Map(){
     const popup = useRef(null)
-    const PopupCloseIcon = useRef(null)
     const [square, setSquare] = useState(0)
     const [status, setStatus] = useState("")
     const [price, setPrice] = useState(0)
     const [plotNumber, setPlotNumber] = useState(0)
 
     const [plotInfo, setPlotInfo] = useState({
-        "2182":{price:999999, square:"10 соток", status:"sold"},
+        "2182":{price:999999, square:"9 соток", status:"sold"},
         "2183":{price:999999, square:"10 соток", status:"free"},
-        "2099":{price:999999, square:"10 соток", status:"free"},
+        "2099":{price:999999, square:"9 соток", status:"free"},
         "2098":{price:999999, square:"10 соток", status:"free"},
         "2184":{price:999999, square:"10 соток", status:"free"},
         "2097":{price:999999, square:"10 соток", status:"free"},
@@ -32,8 +31,8 @@ export default function Map(){
         "2192":{price:999999, square:"10 соток", status:"free"}, 
         "2089":{price:999999, square:"10 соток", status:"free"}, 
         "2193":{price:999999, square:"10 соток", status:"free"}, 
-        "2088":{price:999999, square:"10 соток", status:"free"}, 
-        "2169":{price:999999, square:"10 соток", status:"free"}, 
+        "2088":{price:999999, square:"10 соток", status:"free"},
+        "2169":{price:999999, square:"11 соток", status:"free"},  
         "2168":{price:999999, square:"10 соток", status:"free"}, 
         "2167":{price:999999, square:"10 соток", status:"free"}, 
         "2166":{price:999999, square:"10 соток", status:"free"}, 
@@ -41,65 +40,65 @@ export default function Map(){
         "2163":{price:999999, square:"10 соток", status:"free"},
         "2162":{price:999999, square:"10 соток", status:"free"}, 
         "2161":{price:999999, square:"10 соток", status:"free"}, 
-        "2160":{price:999999, square:"10 соток", status:"free"}, 
-        "2159":{price:999999, square:"10 соток", status:"free"}, 
-        "2158":{price:999999, square:"10 соток", status:"free"}, 
-        "2157":{price:999999, square:"10 соток", status:"free"},
-        "2156":{price:999999, square:"10 соток", status:"free"}, 
-        "2155":{price:999999, square:"10 соток", status:"free"}, 
-        "2154":{price:999999, square:"10 соток", status:"free"}, 
-        "2151":{price:999999, square:"10 соток", status:"free"}, 
+        "2160":{price:999999, square:"12 соток", status:"free"}, 
+        "2159":{price:999999, square:"12 соток", status:"free"}, 
+        "2158":{price:999999, square:"12 соток", status:"free"}, 
+        "2157":{price:999999, square:"12 соток", status:"free"},
+        "2156":{price:999999, square:"12 соток", status:"free"}, 
+        "2155":{price:999999, square:"12 соток", status:"free"}, 
+        "2154":{price:999999, square:"12 соток", status:"free"}, 
+        "2151":{price:999999, square:"12 соток", status:"free"}, 
         "2152":{price:999999, square:"10 соток", status:"free"},
-        "2150":{price:999999, square:"10 соток", status:"free"},
+        "2150":{price:999999, square:"12 соток", status:"free"},
         "2149":{price:999999, square:"10 соток", status:"free"}, 
-        "2147":{price:999999, square:"10 соток", status:"free"},
-        "2148":{price:999999, square:"10 соток", status:"free"},
-        "2146":{price:999999, square:"10 соток", status:"free"}, 
-        "2145":{price:999999, square:"10 соток", status:"free"}, 
-        "2144":{price:999999, square:"10 соток", status:"free"}, 
-        "2143":{price:999999, square:"10 соток", status:"free"}, 
-        "2141":{price:999999, square:"10 соток", status:"free"}, 
-        "2140":{price:999999, square:"10 соток", status:"free"},
-        "2138":{price:999999, square:"10 соток", status:"free"}, 
-        "2139":{price:999999, square:"10 соток", status:"free"},
-        "2137":{price:999999, square:"10 соток", status:"free"}, 
-        "2135":{price:999999, square:"10 соток", status:"free"}, 
-        "2136":{price:999999, square:"10 соток", status:"free"},
-        "2134":{price:999999, square:"10 соток", status:"free"}, 
-        "2133":{price:999999, square:"10 соток", status:"free"},
-        "2132":{price:999999, square:"10 соток", status:"free"},
-        "2130":{price:999999, square:"10 соток", status:"free"}, 
-        "2123":{price:999999, square:"10 соток", status:"free"}, 
-        "2124":{price:999999, square:"10 соток", status:"free"}, 
-        "2125":{price:999999, square:"10 соток", status:"free"},
-        "2126":{price:999999, square:"10 соток", status:"free"}, 
-        "2127":{price:999999, square:"10 соток", status:"free"}, 
-        "2128":{price:999999, square:"10 соток", status:"free"},
-        "2129":{price:999999, square:"10 соток", status:"free"}, 
-        "2122":{price:999999, square:"10 соток", status:"free"},
-        "2121":{price:999999, square:"10 соток", status:"free"}, 
-        "2119":{price:999999, square:"10 соток", status:"free"},
-        "2118":{price:999999, square:"10 соток", status:"free"},
-        "2117":{price:999999, square:"10 соток", status:"free"}, 
-        "2116":{price:999999, square:"10 соток", status:"free"}, 
-        "2115":{price:999999, square:"10 соток", status:"free"}, 
-        "2114":{price:999999, square:"10 соток", status:"free"}, 
+        "2147":{price:999999, square:"12,6 соток", status:"free"},
+        "2148":{price:999999, square:"9 соток", status:"free"},
+        "2146":{price:999999, square:"12 соток", status:"free"}, 
+        "2145":{price:999999, square:"12 соток", status:"free"}, 
+        "2144":{price:999999, square:"12 соток", status:"free"}, 
+        "2143":{price:999999, square:"12 соток", status:"free"}, 
+        "2141":{price:999999, square:"12 соток", status:"free"}, 
+        "2140":{price:999999, square:"8 соток", status:"free"},
+        "2138":{price:999999, square:"9,5 соток", status:"free"}, 
+        "2139":{price:999999, square:"11,4 соток", status:"free"},
+        "2137":{price:999999, square:"12 соток", status:"free"}, 
+        "2135":{price:999999, square:"8 соток", status:"free"}, 
+        "2136":{price:999999, square:"8 соток", status:"free"},
+        "2134":{price:999999, square:"8 соток", status:"free"}, 
+        "2133":{price:999999, square:"8 соток", status:"free"},
+        "2132":{price:999999, square:"12 соток", status:"free"},
+        "2130":{price:999999, square:"12 соток", status:"free"}, 
+        "2123":{price:999999, square:"12 соток", status:"free"}, 
+        "2124":{price:999999, square:"9 соток", status:"free"}, 
+        "2125":{price:999999, square:"9 соток", status:"free"},
+        "2126":{price:999999, square:"9 соток", status:"free"}, 
+        "2127":{price:999999, square:"9 соток", status:"free"}, 
+        "2128":{price:999999, square:"8 соток", status:"free"},
+        "2129":{price:999999, square:"8 соток", status:"free"}, 
+        "2122":{price:999999, square:"9,6 соток", status:"free"},
+        "2121":{price:999999, square:"8 соток", status:"free"}, 
+        "2119":{price:999999, square:"8 соток", status:"free"},
+        "2118":{price:999999, square:"8 соток", status:"free"},
+        "2117":{price:999999, square:"8 соток", status:"free"}, 
+        "2116":{price:999999, square:"8 соток", status:"free"}, 
+        "2115":{price:999999, square:"8 соток", status:"free"}, 
+        "2114":{price:999999, square:"8,35 соток", status:"free"}, 
         "2113":{price:999999, square:"10 соток", status:"free"}, 
-        "2103":{price:999999, square:"10 соток", status:"free"}, 
-        "2092":{price:999999, square:"10 соток", status:"free"}, 
-        "2081":{price:999999, square:"10 соток", status:"free"}, 
-        "2197":{price:999999, square:"10 соток", status:"free"}, 
-        "2186":{price:999999, square:"10 соток", status:"free"}, 
-        "2175":{price:999999, square:"10 соток", status:"free"},
-        "2164":{price:999999, square:"10 соток", status:"free"}, 
-        "2153":{price:999999, square:"10 соток", status:"free"}, 
-        "2142":{price:999999, square:"10 соток", status:"free"}, 
-        "2131":{price:999999, square:"10 соток", status:"free"}, 
-        "2120":{price:999999, square:"10 соток", status:"free"}, 
-        "2169":{price:999999, square:"10 соток", status:"free"}, 
+        "2103":{price:999999, square:"8 соток", status:"free"}, 
+        "2092":{price:999999, square:"8 соток", status:"free"}, 
+        "2081":{price:999999, square:"8 соток", status:"free"}, 
+        "2197":{price:999999, square:"8 соток", status:"free"}, 
+        "2186":{price:999999, square:"8 соток", status:"free"}, 
+        "2175":{price:999999, square:"8 соток", status:"free"},
+        "2164":{price:999999, square:"8 соток", status:"free"}, 
+        "2153":{price:999999, square:"8 соток", status:"free"}, 
+        "2142":{price:999999, square:"8 соток", status:"free"}, 
+        "2131":{price:999999, square:"8 соток", status:"free"}, 
+        "2120":{price:999999, square:"8 соток", status:"free"}, 
+        "2109":{price:999999, square:"8 соток", status:"free"}, 
         "2087":{price:999999, square:"10 соток", status:"free"}, 
-        "2194":{price:999999, square:"10 соток", status:"free"}, 
-        "2195":{price:999999, square:"10 соток", status:"free"},
+        "2194":{price:999999, square:"10 соток", status:"free"},
+        "2195":{price:999999, square:"10 соток", status:"free"}, 
         "2086":{price:999999, square:"10 соток", status:"free"}, 
         "2196":{price:999999, square:"10 соток", status:"free"}, 
         "2085":{price:999999, square:"10 соток", status:"free"}, 
@@ -114,21 +113,21 @@ export default function Map(){
         "2207":{price:999999, square:"10 соток", status:"free"}, 
         "2206":{price:999999, square:"10 соток", status:"free"}, 
         "2205":{price:999999, square:"10 соток", status:"free"}, 
-        "2204":{price:999999, square:"10 соток", status:"free"}, 
-        "2203":{price:999999, square:"10 соток", status:"free"}, 
-        "2181":{price:999999, square:"10 соток", status:"free"},
-        "2180":{price:999999, square:"10 соток", status:"free"},
-        "2179":{price:999999, square:"10 соток", status:"free"}, 
-        "2170":{price:999999, square:"10 соток", status:"free"}, 
-        "2178":{price:999999, square:"10 соток", status:"free"}, 
-        "2171":{price:999999, square:"10 соток", status:"free"}, 
-        "2177":{price:999999, square:"10 соток", status:"free"}, 
-        "2172":{price:999999, square:"10 соток", status:"free"}, 
-        "2176":{price:999999, square:"10 соток", status:"free"}, 
+        "2204":{price:999999, square:"8 соток", status:"free"}, 
+        "2203":{price:999999, square:"10 соток", status:"free"},
+        "2181":{price:999999, square:"9 соток", status:"free"},
+        "2180":{price:999999, square:"10 соток", status:"free"}, 
+        "2179":{price:999999, square:"9 соток", status:"free"}, 
+        "2170":{price:999999, square:"8 соток", status:"free"}, 
+        "2178":{price:999999, square:"9 соток", status:"free"}, 
+        "2171":{price:999999, square:"8 соток", status:"free"}, 
+        "2177":{price:999999, square:"9 соток", status:"free"}, 
+        "2172":{price:999999, square:"8 соток", status:"free"}, 
+        "2176":{price:999999, square:"9 соток", status:"free"},
         "2174":{price:999999, square:"10 соток", status:"free"},
-        "2173":{price:999999, square:"10 соток", status:"free"},
+        "2173":{price:999999, square:"9 соток", status:"free"},
     })
-
+    
     function setMapStates(event){
         let id = event.target.getAttribute('data-idx')
         setPlotNumber(id)
@@ -177,7 +176,7 @@ export default function Map(){
     }
 
     function handleMapClick(event){
-        if (event.target.tagName == 'path'){
+        if (event.target.tagName === 'path'){
 
             setMapStates(event)
 
@@ -193,7 +192,9 @@ export default function Map(){
         popup.current.classList.remove('open')
     }
 
-    function handleEntry(){}
+    function handleEntry(){
+        
+    }
 
     return (
         <div className='Map' id='Map'>
@@ -201,15 +202,15 @@ export default function Map(){
                 <div className="Map-title">Карта участков</div>
                 <div className="Map-container">
                     <div className='Map-imageWrapper'>
-                        <img className='Map-image' src={process.env.PUBLIC_URL + '/images/Map.jpg'} draggable="false"></img>
-                        <img className="Map-numbers" src={process.env.PUBLIC_URL + '/images/numbers.png'}></img>
+                        <img className='Map-image' src={process.env.PUBLIC_URL + '/images/Map.jpg'} draggable="false" alt="map"></img>
+                        <img className="Map-numbers" src={process.env.PUBLIC_URL + '/images/numbers.png'} alt="numbers"></img>
                         <div className='Map-popUp Popup' ref={popup}>
                             <div className='Popup-content'>
                                 <div className='Popup-close' onClick={closePopup}></div>
                                 <div className='Popup-title'>
                                     Участок&nbsp;
                                     <div className={"Popup-variable " + status}>
-                                        №{plotNumber}&nbsp;-&nbsp;{status=="free" ? "Свободен" : status=="booked" ? "Забронирован" : status=="sold" ? "Продан" : ""} 
+                                        №{plotNumber}&nbsp;-&nbsp;{status==="free" ? "Свободен" : status==="booked" ? "Забронирован" : status==="sold" ? "Продан" : ""} 
                                     </div>
                                 </div>
                                 <div className='Popup-price Popup-description'>Цена:&nbsp;<div className='Popup-variable'>{price} руб.</div></div>
@@ -305,7 +306,7 @@ export default function Map(){
                             <path data-idx="2142" className={plotInfo["2142"].status} d="M 447.882 498.026 L 382.211 517.822 L 385.585 604.191 L 456.183 581.515 L 447.882 498.026 Z"></path>
                             <path data-idx="2131" className={plotInfo["2131"].status} d="M 381.274 518.148 L 307.897 539.516 L 309.351 628.442 L 384.82 604.528 L 381.274 518.148 Z"></path>
                             <path data-idx="2120" className={plotInfo["2120"].status} d="M 307.124 539.849 L 237.87 560.503 L 234.8 652.301 L 308.441 628.439 L 307.124 539.849 Z"></path>
-                            <path data-idx="2169" className={plotInfo["2169"].status} d="M 237.019 560.741 L 177.083 579.099 L 141.732 680.248 L 234.237 652.509 L 237.019 560.741 Z"></path>
+                            <path data-idx="2109" className={plotInfo["2109"].status} d="M 237.019 560.741 L 177.083 579.099 L 141.732 680.248 L 234.237 652.509 L 237.019 560.741 Z"></path>
                             <path data-idx="2087" className={plotInfo["2087"].status} d="M 989.623 307.964 L 1004.331 311.759 L 1044.028 299.423 L 1003.066 239.483 L 955.62 252.61 L 989.623 307.964 Z"></path>
                             <path data-idx="2194" className={plotInfo["2194"].status} d="M 955.275 251.953 L 923.355 200.245 L 929.292 192.76 L 964.653 183.898 L 1002.423 238.618 L 955.275 251.953 Z"></path>
                             <path data-idx="2195" className={plotInfo["2195"].status} d="M 965.193 183.604 L 1010.394 172.514 L 1050.121 225.928 L 1003.305 238.913 L 965.193 183.604 Z"></path>

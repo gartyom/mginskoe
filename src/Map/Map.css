@@ -69,6 +69,7 @@ path{
     fill: rgb(72, 255, 0); 
     fill-opacity: 0.2;
     stroke-opacity: 0;
+    cursor: pointer;
 }
 
 path.free{
