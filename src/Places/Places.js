@@ -15,7 +15,7 @@ export default function Places(){
                 <div className='Place'>
                     <div className='Place-content'>
                         <div className='Place-imageContainer'>
-                            <img className='Place-image' src={process.env.PUBLIC_URL + '/images/kad-sankt-peterburga.jpg'}></img>
+                            <img className='Place-image' src={process.env.PUBLIC_URL + '/images/kad-sankt-peterburga.jpg'} alt=''></img>
                         </div>
                         <div className='Place-description'>
                             <div className='Place-icon'></div>
@@ -37,7 +37,7 @@ export default function Places(){
                 <div className='Place'>
                     <div className='Place-content'>
                         <div className='Place-imageContainer'>
-                            <img className='Place-image' src={process.env.PUBLIC_URL + '/images/kirovsk.jpg'}></img>
+                            <img className='Place-image' src={process.env.PUBLIC_URL + '/images/kirovsk.jpg'} alt=''></img>
                         </div>
                         <div className='Place-description'>
                             <div className='Place-icon'></div>
@@ -59,7 +59,7 @@ export default function Places(){
                 <div className='Place'>
                     <div className='Place-content'>
                         <div className='Place-imageContainer'>
-                            <img className='Place-image' src={process.env.PUBLIC_URL + '/images/kanon-reki-lava.jpg'}></img>
+                            <img className='Place-image' src={process.env.PUBLIC_URL + '/images/kanon-reki-lava.jpg'} alt=''></img>
                         </div>
                         <div className='Place-description'>
                             <div className='Place-icon'></div>
@@ -81,7 +81,7 @@ export default function Places(){
                 <div className='Place'>
                     <div className='Place-content'>
                         <div className='Place-imageContainer'>
-                            <img className='Place-image' src={process.env.PUBLIC_URL + '/images/krepost-oreshek.jpg'}></img>
+                            <img className='Place-image' src={process.env.PUBLIC_URL + '/images/krepost-oreshek.jpg'} alt=''></img>
                         </div>
                         <div className='Place-description'>
                             <div className='Place-icon'></div>
@@ -103,7 +103,7 @@ export default function Places(){
                 <div className='Place'>
                     <div className='Place-content'>
                         <div className='Place-imageContainer'>
-                            <img className='Place-image' src={process.env.PUBLIC_URL + '/images/sinyavskie-visoti.jpg'}></img>
+                            <img className='Place-image' src={process.env.PUBLIC_URL + '/images/sinyavskie-visoti.jpg'} alt=''></img>
                         </div>
                         <div className='Place-description'>
                             <div className='Place-icon'></div>
