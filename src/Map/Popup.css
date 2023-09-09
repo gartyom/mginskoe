@@ -1,16 +1,94 @@
 .Popup{
    z-index: 99;
    position: absolute;
-   border: 1px solid red;
+   visibility: hidden;
+}
+
+.Popup.open{
+    visibility: visible;
 }
 
 .Popup-content{
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--main-text-color);
+    color: white;
     width: fit-content;
     height: fit-content;
-    padding: 10px;
+    width: 300px;
+    height: 310px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.Popup-description{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.Popup-variable{
+    font-weight: 500;
+}
+
+.Popup-variable.free{
+    color: rgb(55, 255, 0)
+}
+
+.Popup-variable.booked{
+    color: rgb(251, 255, 0)
+}
+
+.Popup-variable.sold{
+    color: rgb(255, 0, 0)
 }
 
 .Popup-title{
-    width: 200px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
 }
+
+.Popup-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 20px;
+    right: 20px;
+    background-image: url('/public/icons/close.png');
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.Popup-input{
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    border-bottom: 1px solid white;
+    color: white;
+    text-align: center;
+}
+
+.Popup-sendButton{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--main-text-color);
+    border: none;
+    font-size: 18px;
+}
+
+
+  
