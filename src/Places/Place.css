@@ -1,12 +1,271 @@
 .Place{
     width: 100%;
-    height: calc(200px + 20vmin);
-    background-color: rgb(145, 145, 145);
+    max-width: 340px;
+    height: 340px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Place-imageContainer{
+    height: calc(340px);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     border-radius: 20px;
 }
 
-@media screen and (max-width: 500px) {
+.Place-image{
+    height: 100%;
+    width: auto;
+}
+
+.Place-description{
+    height: fit-content;
+    padding-bottom: 5px;
+    padding-top: 20px;
+    background-color: rgba(29, 31, 29, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    width: 340px;
+    border-radius: 20px;
+    bottom: 120px;
+    position: relative;
+    left: 20px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.Place-text{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.Place-timeText{
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.Place-mainText{
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    display: none;
+}
+
+.Place-openIcon{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    background-image: url('/public/icons/down-arrow.png');
+    background-size: contain;
+    cursor: pointer;
+}
+
+.Place-text.open{
+    z-index: 9999;
+}
+
+.Place-text.open .Place-mainText{
+    display: block;
+}
+
+.Place-text.open .Place-openIcon{
+    background-image: url('/public/icons/up-arrow.png');
+    background-size: contain;
+}
+
+@media screen and (max-width: 1200px) {
     .Place{
-        height: calc(150px + 20vmin);
+        max-width: 320px;
+    }
+
+    .Place-imageContainer{
+        height: 340px;
+      
+    }
+    
+    .Place-description{
+        width: 320px;
+        bottom: 100px;
+    }
+
+    .Place-text{
+        font-size: 20px;
+    }
+    
+    
+    .Place-mainText{
+        font-weight: 400;
+        font-size: 16px;
     }
 }
+
+@media screen and (max-width: 740px) {
+    .Place{
+        max-width: 300px;
+    }
+
+    .Place-imageContainer{
+        height: 340px;
+      
+    }
+    
+    .Place-description{
+        width: 310px;
+        left: -5px;
+        bottom: 100px;
+    }
+
+    .Place-text{
+        font-size: 18px;
+    }
+    
+    
+    .Place-mainText{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .Place{
+        max-width: 270px;
+    }
+
+    .Place-imageContainer{
+        height: 340px;
+      
+    }
+    
+    .Place-description{
+        width: 280px;
+        bottom: 100px;
+    }
+
+    .Place-text{
+        font-size: 16px;
+    }
+    
+    
+    .Place-mainText{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .Place{
+        max-width: 250px;
+    }
+
+    .Place-imageContainer{
+        height: 340px;
+      
+    }
+    
+    .Place-description{
+        width: 260px;
+        bottom: 100px;
+    }
+
+    .Place-text{
+        font-size: 16px;
+    }
+    
+    
+    .Place-mainText{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .Place{
+        max-width: 340px;
+    }
+
+    .Place-imageContainer{
+        height: 340px;
+    }
+    
+    .Place-description{
+        width: 320px;
+        left: 40px;
+        bottom: 100px;
+    }
+
+    .Place-text{
+        font-size: 18px;
+    }
+    
+    
+    .Place-mainText{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .Place{
+        max-width: 300px;
+    }
+
+    .Place-imageContainer{
+        height: 340px;
+    }
+    
+    .Place-description{
+        width: 300px;
+        left: 20px;
+        bottom: 100px;
+    }
+
+    .Place-text{
+        font-size: 18px;
+    }
+    
+    
+    .Place-mainText{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .Place{
+        max-width: 220px;
+    }
+
+    .Place-imageContainer{
+        height: 340px;
+    }
+    
+    .Place-description{
+        width: 230px;
+        left: 5px;
+        bottom: 100px;
+    }
+
+    .Place-text{
+        font-size: 18px;
+    }
+    
+    
+    .Place-mainText{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+

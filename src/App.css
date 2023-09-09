@@ -21,7 +21,7 @@ body{
 
 :root{
   --header-background-color: rgba(255, 255, 255, 0.8);
-  --header-text-color: #1d1f1d;
+  --header-text-color: var(--main-text-color);
 
   --header-height: 48px;
 

@@ -62,14 +62,3 @@
     }
     
 }
-
-/* .Card:hover{
-    height: fit-content;
-    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0px 0px 68px -27px rgba(34, 60, 80, 0.28);
-}
-
-.Card:hover .Card-description{
-    opacity: 1;
-    transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
-} */
