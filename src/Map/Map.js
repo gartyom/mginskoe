@@ -144,6 +144,9 @@ export default function Map(){
         let imageWidth = 1600
         let imageHeight = 700
 
+        let popupWidth = 300
+        let popupHeight = 310
+
         const pathBBox = event.target.getBBox();
         left = Math.round(pathBBox.x + pathBBox.width/2)
         top = Math.round(pathBBox.y + pathBBox.height/2)
@@ -154,13 +157,15 @@ export default function Map(){
             imageHeight = imageHeight * matchMeidaFactor
             left *= matchMeidaFactor
             top *= matchMeidaFactor 
+            popupWidth = 230
+            popupHeight = 240
         }
 
-        if(top > (imageHeight-310)){
-            top -= 310
+        if(top > (imageHeight-popupHeight)){
+            top -= popupHeight
         }
-        if(left > (imageWidth-300)){
-            left -= 300
+        if(left > (imageWidth-popupWidth)){
+            left -= popupWidth
         }
 
        
