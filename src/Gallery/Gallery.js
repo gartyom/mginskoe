@@ -4,6 +4,11 @@ export default function Gallery(){
     return (
         <div className="Gallery" id='Gallery'>
             <div className='Gallery-title'>Галерея</div>
+            <div className='Gallery-videoContainer'>
+                <video className='Gallery-video' controls preload='metadata'>
+                    <source src={process.env.PUBLIC_URL + '/videos/video_2023-09-12_01-48-32.mp4#t=0.001'} type="video/mp4" ></source>
+                </video>
+            </div>
             <div className="Gallery-content">
                 <div className='Gallery-card'>
                     <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_1.jpg'}></img>

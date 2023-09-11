@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './Map.css'
 import './Popup.css'
 
@@ -8,6 +8,29 @@ export default function Map(){
     const [status, setStatus] = useState("")
     const [price, setPrice] = useState(0)
     const [plotNumber, setPlotNumber] = useState(0)
+
+    const [plots, setPlots] = useState(0)
+
+    // const fetchContent = () => {
+    //     fetch("/api/v1/plots")
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         let p = {}
+    //         data.forEach(element => {
+    //             p = Object.assign({}, p, element);
+    //         });
+    //         setPlots(p)
+    //     })
+    // }
+
+    // useEffect(() => {
+    //     fetchContent()
+    // }, [])
+
+
+    // useEffect(() => {
+    //     console.log(plots)
+    // }, [plots])
 
     const [plotInfo, setPlotInfo] = useState({
         "2182":{price:999999, square:"9 соток", status:"sold"},
@@ -127,6 +150,7 @@ export default function Map(){
         "2174":{price:999999, square:"10 соток", status:"free"},
         "2173":{price:999999, square:"9 соток", status:"free"},
     })
+
     
     function setMapStates(event){
         let id = event.target.getAttribute('data-idx')
