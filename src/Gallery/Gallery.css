@@ -33,7 +33,7 @@
 
 .Gallery-content{
     max-width: fit-content;
-    width: calc(100%-40px);
+    width: 100%;
     height: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -84,14 +84,9 @@
     .Gallery-img:hover{
         opacity: 0.6;
     }
-    
 }
 
 @media screen and (max-width: 750px){
-    .Gallery-videoContainer{
-        width: 100%;   
-    }
-
     .Gallery-cards{
         grid-template-columns: repeat(1, 1fr);
     }
