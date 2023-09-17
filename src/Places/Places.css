@@ -16,7 +16,7 @@
     grid-template-columns: repeat(3, 1fr);
     margin-left: auto;
     margin-right: auto;
-    gap: 20px;
+    row-gap: 20px;
     padding-bottom: 20px;
 }
 
@@ -33,7 +33,7 @@
 @media screen and (max-width: 1200px) {
     .Places-content{
         gap: 10px;
-        row-gap: 40px;
+        row-gap: 20px;
         grid-template-columns: repeat(2, 1fr);
         max-width: 700px;
     }
@@ -42,7 +42,7 @@
 @media screen and (max-width: 560px) {
     .Places-content{
         gap: 10px;
-        row-gap: 40px;
+        row-gap: 20px;
         grid-template-columns: repeat(1, 1fr);
         max-width: 700px;
     }

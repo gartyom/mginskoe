@@ -1,18 +1,25 @@
 .Phone{
     height: fit-content;
-    width: var(--phone-width);
+    width: 400px;
     height: 48px;
     font-size: 14px;
     font-weight: 500;
     position: relative;
     top: 0;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 }
 
-@media screen and (max-width: 450px) {
-    .Phone{
-        width: 150px;
-    }
+.Phone-number{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Phone-numberIcon{
+    width: 28px;
+    height: 28px;
 }

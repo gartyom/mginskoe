@@ -8,6 +8,7 @@ import Route from './Location/Location';
 import Gallery from './Gallery/Gallery';
 import Footer from './Footer/Footer';
 import Places from './Places/Places'
+import Description from './Description/Description'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Header/>
         <div className='App-content'>
           <div className='Hello-section'>
+            {/* <Description></Description> */}
             <About></About>
             <Infrastructure></Infrastructure>
           </div>

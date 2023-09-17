@@ -1,0 +1,21 @@
+.Description{
+    color: var(--main-text-color);
+    height: 180px;
+    scroll-margin-top: calc(var(--header-height) + 11px);
+}
+ 
+.Description-content{
+    max-width: 1600px;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+ 
+.Description-title{
+    font-size: calc(18px + 2vmin);
+    font-weight: 700;
+}

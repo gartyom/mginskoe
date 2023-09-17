@@ -35,10 +35,6 @@ body{
   --nav-width: 70%;
 }
 
-:root{
-  --phone-width: fit-content;
-}
-
 :root {
   --about-height: 300px;
 }

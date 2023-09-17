@@ -1,7 +1,7 @@
 .Place{
     width: 100%;
     max-width: 340px;
-    height: 340px;
+    height: 360px;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -32,11 +32,23 @@
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     width: 340px;
     border-radius: 20px;
-    bottom: 120px;
+    bottom: 110px;
     position: relative;
     left: 20px;
     overflow: hidden;
-    z-index: 10;
+}
+
+.Place-time{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Place-timeIcon{
+    width: 24px;
+    height: 24px;
 }
 
 .Place-text{
@@ -50,7 +62,7 @@
 
 .Place-timeText{
     font-weight: 500;
-    margin-top: 10px;
+    height: fit-content;
 }
 
 .Place-mainText{
@@ -72,11 +84,11 @@
     cursor: pointer;
 }
 
-.Place-text.open{
-    z-index: 9999;
+.Place-description.open{
+    z-index: 99;
 }
 
-.Place-text.open .Place-mainText{
+.Place-description.open .Place-mainText{
     display: block;
 }
 
@@ -97,7 +109,6 @@
     
     .Place-description{
         width: 320px;
-        bottom: 100px;
     }
 
     .Place-text{
@@ -124,7 +135,6 @@
     .Place-description{
         width: 310px;
         left: -5px;
-        bottom: 100px;
     }
 
     .Place-text{
@@ -150,7 +160,6 @@
     
     .Place-description{
         width: 280px;
-        bottom: 100px;
     }
 
     .Place-text{
@@ -177,7 +186,6 @@
     
     .Place-description{
         width: 260px;
-        bottom: 100px;
     }
 
     .Place-text{
@@ -203,7 +211,6 @@
     .Place-description{
         width: 320px;
         left: 40px;
-        bottom: 100px;
     }
 
     .Place-text{
@@ -229,7 +236,6 @@
     .Place-description{
         width: 300px;
         left: 20px;
-        bottom: 100px;
     }
 
     .Place-text{
