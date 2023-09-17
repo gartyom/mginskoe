@@ -18,6 +18,51 @@ export default function Gallery(){
         
     }
 
+    function renderGalleryCards(){
+        const g = [
+            {
+                img: '/images/dji_fly_1.jpg'
+            },
+            {
+                img: '/images/dji_fly_2.jpg'
+            },
+            {
+                img: '/images/dji_fly_3.jpg'
+            },
+            {
+                img: '/images/dji_fly_4.jpg'
+            },
+            {
+                img: '/images/dji_fly_5.jpg'
+            },
+            {
+                img: '/images/dji_fly_6.jpg'
+            },
+            {
+                img: '/images/dji_fly_7.jpg'
+            },
+            {
+                img: '/images/dji_fly_8.jpg'
+            },
+            {
+                img: '/images/dji_fly_9.jpg'
+            },
+        ]
+
+        return (
+            <div className='Gallery-cards' onClick={handleCardClick}>
+                {g.map((image, index) => {
+                    return (
+                        <div className='Gallery-card' key={index}>
+                            <img className='Gallery-img' src={process.env.PUBLIC_URL + image.img}></img>
+                        </div>
+                    )
+                })}
+            </div>
+        )
+        
+    }
+
     return (
         <div className="Gallery" id='Gallery'>
             <div className='Gallery-title'>Галерея</div>
@@ -28,35 +73,7 @@ export default function Gallery(){
                         <source src={process.env.PUBLIC_URL + '/videos/video_2023-09-12_01-48-32.mp4#t=0.001'} type="video/mp4" ></source>
                     </video>
                 </div>
-                <div className='Gallery-cards' onClick={handleCardClick}>
-                    <div className='Gallery-card'>
-                        <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_1.jpg'}></img>
-                    </div>
-                    <div className='Gallery-card'>
-                        <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_2.jpg'}></img>
-                    </div>
-                    <div className='Gallery-card'>
-                        <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_3.jpg'}></img>
-                    </div>
-                    <div className='Gallery-card'>
-                        <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_4.jpg'}></img>
-                    </div>
-                    <div className='Gallery-card'>
-                        <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_5.jpg'}></img>
-                    </div>
-                    <div className='Gallery-card'>
-                        <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_6.jpg'}></img>
-                    </div>
-                    <div className='Gallery-card'>
-                        <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_7.jpg'}></img>
-                    </div>
-                    <div className='Gallery-card'>
-                        <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_8.jpg'}></img>
-                    </div>
-                    <div className='Gallery-card'>
-                        <img className='Gallery-img' src={process.env.PUBLIC_URL + '/images/dji_fly_9.jpg'}></img>
-                    </div>
-                </div>
+                {renderGalleryCards()}
                 <div className='GalleryPopup' ref={Popup}>
                     <div className='GalleryPopup-content'>
                         <img className='GalleryPopup-closeIcon' src={process.env.PUBLIC_URL + '/icons/close.png'} onClick={closeGalleryPopup}></img>
