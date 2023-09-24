@@ -1,0 +1,76 @@
+.Form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: calc(100% - 40px);
+    width: 600px;
+
+}
+
+.Form-title{
+    font-size: calc(15px + 2vmin);
+    font-weight: 700;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Form-inputContainer{
+    margin-top: 30px;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.Form-inputSeparator{
+    width: 80%;
+    height: 1px;
+    background-color: rgba(26, 26, 26, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Form-input{
+    font-size: calc(13px + 1vmin);
+    font-weight: 700;
+    color: rgb(29,31,29);
+    background-color: rgba(0,0,0,0);
+    border: none;
+    height: 50%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.Form-input:focus{
+    border: none;
+    outline: none;
+}
+
+.Form-button{
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(29, 31, 29, 0.8);
+    border: 1px solid rgba(251, 253, 251, 0.1);
+    color: white;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    font-size: calc(13px + 1vmin);
+    font-weight: 700;
+}
+

@@ -66,20 +66,6 @@
     
 }
 
-
-/* @media screen and (max-width: 7500px){
-    .Gallery-cards{
-        grid-template-columns: repeat(2, 1fr);
-        
-    }
-
-    .Gallery-card{
-        width: 100%;
-        max-width: 500px;
-    }
-    
-} */
-
 @media screen and (min-width: 751px){
     .Gallery-img:hover{
         opacity: 0.6;

@@ -1,0 +1,122 @@
+.Banner{
+    width: 500px;
+    max-width: calc(100vw - 40px);
+    height: 300px;
+    background-color: rgba(29, 31, 29, 0.8);
+    z-index: 99;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    font-size: calc(20px + 1vmin);
+    border-radius: 20px;
+    color: white;
+}
+
+.Banner-title{
+    width: fit-content;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30px;
+    height: 50px;
+    font-weight: 600;
+}
+
+.Banner-text{
+    font-weight:500;
+    left: 20px;
+    width: calc(100% - 40px);
+    position: relative;
+    top: 40px;
+    font-size: calc(15px + 1vmin);
+}
+
+.Banner-textHighlight{
+    color: #ffcc00;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.Banner-urls{
+    top: 100px;
+    width: calc(100% - 40px);
+    height: 60px;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.Banner-PhoneUrl{
+    font-size: calc(25px);
+    font-weight: 600;
+    height: fit-content;
+    padding: 0;
+    margin: 0;
+}
+
+.Banner-phone{
+    position: relative;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto ;
+    width: fit-content;
+
+}
+
+.Banner-socials{
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+
+.Banner-socialImage{
+    width: 35px;
+    height: 35px;
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .Banner-text{
+        font-weight:500;
+        left: 20px;
+        width: calc(100% - 40px);
+        position: relative;
+        top: 20px;
+        font-size: calc(15px + 1vmin);
+    }
+
+    .Banner-phone{
+        top: -20px;
+    }
+
+    .Banner-urls{
+        top: 80px;
+    }
+
+    .Banner{
+        height: 270px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .Banner-title{
+        font-size: 18px;
+    }
+
+    .Banner{
+        max-width: calc(100% - 40px);
+    }
+
+    .Banner-text{
+        font-size: 15px;
+    }
+}

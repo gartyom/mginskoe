@@ -96,7 +96,7 @@
     display: block;
 }
 
-.Place-text.open .Place-openIcon{
+.Place-description.open .Place-openIcon{
     background-image: url('/public/icons/up-arrow.png');
     background-size: contain;
 }

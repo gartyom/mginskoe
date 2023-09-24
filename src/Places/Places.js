@@ -5,19 +5,6 @@ export default function Places(){
 
     const [previousPlace, setPreviousPlace] = useState(undefined)
 
-    function handlePlaceClick(event){
-        if (event.target.matches(".Place-openIcon")){
-            let element = event.target.parentElement.parentElement
-            if(!element.matches(".open")){
-                if(previousPlace != undefined){
-                    previousPlace.classList.remove("open")
-                }
-                setPreviousPlace(element)
-            }
-            element.classList.toggle("open")
-        }
-    }
-
     function renderPlaces(){
         const p = [
             {
@@ -96,6 +83,18 @@ export default function Places(){
             
         ]
 
+        function handleCardClick(event){
+            if(event.currentTarget.matches(".open")){
+                event.currentTarget.classList.remove("open")
+            } else {
+                if(previousPlace !== undefined){
+                    previousPlace.classList.remove("open")      
+                }
+                setPreviousPlace(event.currentTarget)
+                event.currentTarget.classList.add('open')
+            }
+        }
+
         return ( 
         
                 p.map((place, index) => {
@@ -105,14 +104,14 @@ export default function Places(){
                             <div className='Place-imageContainer'>
                                 <img className='Place-image' src={process.env.PUBLIC_URL + place.img} alt=''></img>
                             </div>
-                            <div className='Place-description'>
+                            <div className='Place-description' onClick={handleCardClick}>
                                 <div className='Place-icon'></div>
                                 <div className='Place-text'>
                                     <div className='Place-title'>
                                         {place.name}
                                     </div>
                                     <div className='Place-time'>
-                                        <img className='Place-timeIcon' src={process.env.PUBLIC_URL + place.icon}></img>
+                                        <img className='Place-timeIcon' src={process.env.PUBLIC_URL + place.icon} alt='icon'></img>
                                         <div className='Place-timeText'>{place.time}</div>
                                         <div className='Place-distance'>{place.distance}</div>
                                     </div>
@@ -132,8 +131,20 @@ export default function Places(){
     return(
         <div className="Places" id='Places'>
             <div className="Places-title">Что рядом</div>
-            <div className="Places-content" onClick={handlePlaceClick}>
-                {renderPlaces()}
+            <div className="Places-content">
+                <div className='Places-container'>
+                    {renderPlaces()}
+                </div>
+                <div className='Places-history'>
+                    <div className='Places-historyTitle'>История деревни Пухолово:</div>
+                    <ul className='Places-historyList'>
+                        <li className='Places-historyListItem'>На карте Ингерманландии,  составленной по шведским материалам 1676 года, упоминается деревня Pucschowick.</li>
+                        <li className='Places-historyListItem'>На шведской «Генеральной карте провинции Ингерманландии» 1704 года, составленной по материалам 1678 года она упомянута, как Puchala.</li>
+                        <li className='Places-historyListItem'>На карте Санкт-Петербургской губернии Я. Ф. Шмита 1770 года она обозначена, как деревня Пухолова.</li>
+                        <li className='Places-historyListItem'>На карте Санкт-Петербургской губернии Ф. Ф. Шуберта 1834 года обозначена деревня Пухолово, состоящая из 31 крестьянского двора. В деревне находилась водяная мельница.</li>
+                        <li className='Places-historyListItem'>В 1837 году Княгиня Т. В. Юсупова стала полноправной хозяйкой деревень Пухолово и Сологубовка. Юсуповы – одна из самых видных по происхождению и богатству русских дворянских фамилий. Им принадлежали все земли в этой округе.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     )

@@ -30,7 +30,7 @@ export default function Gallery(){
                 img: '/images/dji_fly_3.jpg'
             },
             {
-                img: '/images/dji_fly_4.jpg'
+                img: '/images/dji_fly_10.jpg'
             },
             {
                 img: '/images/dji_fly_5.jpg'
@@ -54,7 +54,7 @@ export default function Gallery(){
                 {g.map((image, index) => {
                     return (
                         <div className='Gallery-card' key={index}>
-                            <img className='Gallery-img' src={process.env.PUBLIC_URL + image.img}></img>
+                            <img className='Gallery-img' src={process.env.PUBLIC_URL + image.img} alt=''></img>
                         </div>
                     )
                 })}
@@ -76,8 +76,8 @@ export default function Gallery(){
                 {renderGalleryCards()}
                 <div className='GalleryPopup' ref={Popup}>
                     <div className='GalleryPopup-content'>
-                        <img className='GalleryPopup-closeIcon' src={process.env.PUBLIC_URL + '/icons/close.png'} onClick={closeGalleryPopup}></img>
-                        <img className='GalleryPopup-image' src={currentImage}></img>
+                        <img className='GalleryPopup-closeIcon' src={process.env.PUBLIC_URL + '/icons/close.png'}  alt='close' onClick={closeGalleryPopup}></img>
+                        <img className='GalleryPopup-image' src={currentImage}  alt=''></img>
                     </div>
                 </div>
             </div>
