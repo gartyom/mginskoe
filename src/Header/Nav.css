@@ -1,8 +1,10 @@
 .Nav{
     width: var(--nav-width);
     left: 0;
-    transition: height 0.25s;
+    transition: all 0.25s;
     align-items: center;
+    overflow: hidden;
+    height: 100%;
 }
 
 .Nav-content{
@@ -14,7 +16,7 @@
     max-width: 500px;
     list-style: none;
     justify-content: space-between;
-    transition: height 0.25s;
+    transition: all 0.25s;
 }
 
 .Nav-item{
@@ -30,10 +32,9 @@
 @media screen and (max-width: 900px) {
 
     .Nav{
-        transition: height 0.25s;
-        font-size: 16px;
-        height: 0px;
+        font-size: 25px;
         width: 100%;
+        font-weight: 600;
     }
 
     .Nav-content{
@@ -47,18 +48,11 @@
         left: calc(5% + 12px);
     }
 
-    .Nav.open{
-        
-        height: 300px;
-        transition: height 0.25s;
-        overflow: hidden;
-    }
-
     .Nav.open .Nav-content{
-        height: 220px;
+        height: fit-content;
         width: fit-content;
         align-items: baseline;
-        transition: height 0.1s;
+        transition: all 0.5s;
     }
 
     .Nav-item{
@@ -70,7 +64,7 @@
 
     .Nav.open .Nav-item{
         opacity: 1;
-        transition: opacity 0.5s;
+        transition: all 1.5s;
     }
 }
 

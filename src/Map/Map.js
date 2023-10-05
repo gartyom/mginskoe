@@ -239,9 +239,9 @@ export default function Map(){
                                 </div>
                                 <div className='Popup-price Popup-description'>Цена:&nbsp;<div className='Popup-variable'>{price} руб.</div></div>
                                 <div className='Popup-square Popup-description'>Площадь:&nbsp;<div className='Popup-variable'>{square.toString().replace(".00", "")} сот.</div></div>
-                                <input className='Popup-inputName Popup-input' placeholder='Как к вам обращаться?'/>
-                                <input className='Popup-inputPhone Popup-input' placeholder='Мобильный телефон'/>
-                                <button className='Popup-sendButton Popup-input' onClick={handleEntry}>Записаться на просмотр</button>
+                                <input className={'Popup-inputName Popup-input ' + status} placeholder='Как к вам обращаться?'/>
+                                <input className={'Popup-inputPhone Popup-input ' + status} placeholder='Мобильный телефон'/>
+                                <button className={'Popup-sendButton Popup-input ' + status} onClick={handleEntry}>Записаться на просмотр</button>
                             </div>
                         </div>
                         <svg viewBox="0 0 1600 700" className='Map-svgContainer' onClick={handleMapClick}>

@@ -8,9 +8,10 @@ export default function Consultation(){
     return (
         <div className="Consultation">
             <div className="Consultation-content">
+            <div className='Consultation-title'>Получите консультацию</div>
                 <img className='Consultation-background' src={process.env.PUBLIC_URL + '/images/consultation.jpg'}></img>
                 <div className='Consultation-form Form'>
-                    <div className='Form-title'>Получите консультацию</div>
+                    
                     <div className='Form-inputContainer'>
                         <input className='Form-input' placeholder='Как к вам обращаться?'></input>
                         <div className='Form-inputSeparator'></div>

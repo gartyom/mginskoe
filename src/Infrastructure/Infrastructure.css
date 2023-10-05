@@ -28,7 +28,7 @@
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
-    font-size: 40px;
+    font-size: calc(18px + 3vmin);
     font-weight: 700;
     margin-bottom: 10px;
 }

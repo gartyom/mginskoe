@@ -8,7 +8,8 @@ import Gallery from './Gallery/Gallery';
 import Footer from './Footer/Footer';
 import Places from './Places/Places'
 import Consultation from './Consultation/Consultation';
-import Avolga from './Avolga/Avolga';
+import News from './News/News'
+
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
           <Route></Route>
           <Places></Places>
           <Gallery></Gallery>
+          <News></News>
           <Consultation></Consultation>
-          <Avolga></Avolga>
           <Footer></Footer>
         </div>
     </div>

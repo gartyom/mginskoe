@@ -83,6 +83,11 @@
     border-radius: 0px;
 }
 
+.Popup-sendButton.sold{
+    background-color: grey;
+    pointer-events: none;
+}
+
 .Popup-sendButton{
     width: 100%;
     height: 40px;

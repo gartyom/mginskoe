@@ -48,8 +48,3 @@ body{
   margin-top: calc(var(--header-height));
 }
 
-.App .disabled{
-  overflow: hidden;
-  height: 100vh;
-  height: -webkit-fill-available;
-}

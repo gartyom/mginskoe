@@ -12,7 +12,9 @@ export default function Header(){
         HeaderIcon.current.classList.toggle('open')
         Nav.current.classList.toggle('open')
         Header.current.classList.toggle('open')
-        // 
+
+        document.body.classList.toggle("disabled");
+
     }
 
     return (
@@ -38,6 +40,9 @@ export default function Header(){
                         </li>
                         <li className="Nav-item">
                             <a className='Nav-itemLink' href='#Gallery' onClick={toggleHeader}>Галерея</a>
+                        </li>
+                        <li className="Nav-item">
+                            <a className='Nav-itemLink' href='#News' onClick={toggleHeader}>Новости</a>
                         </li>
                     </ul>
                 </div>

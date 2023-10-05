@@ -25,3 +25,16 @@
     top: 0;
     left: 0;
 }
+
+
+.Consultation-title{
+    font-size: calc(18px + 3vmin);
+    font-weight: 700;
+    top: 170px;
+    position: relative;
+    width: fit-content;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
