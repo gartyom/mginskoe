@@ -47,10 +47,10 @@ export default function Header(){
                     </ul>
                 </div>
                 <div className="Phone">
-                    <a className="Phone-number">
+                    <a className="Phone-number" href='tel:+77777777777'>
                         <div className='Phone-numberText'>+7 777 777 77 77</div>
-                        <img className='Phone-numberIcon'  src={process.env.PUBLIC_URL + '/icons/phone.png'}></img>
-                        </a>
+                        <img className='Phone-numberIcon'  src={process.env.PUBLIC_URL + '/icons/phone.png'} alt=''></img>
+                    </a>
                 </div>
             </div>
         </div>

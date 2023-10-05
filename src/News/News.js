@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import './News.css'
 import './NewsCard.css'
 
@@ -63,7 +63,7 @@ export default function News(){
                             {n.title}
                         </div>
                         <div className='NewsCard-imageWrapper'>
-                            <img className='NewsCard-image' src={n.image} alt="" />
+                            <img className='NewsCard-image' src={process.env.PUBLIC_URL + n.image} alt="" />
                         </div>
                         <div className='NewsCard-date'>{n.date}</div>
                         <div className='NewsCard-textContainer' onClick={openCard}>

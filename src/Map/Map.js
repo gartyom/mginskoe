@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import './Map.css'
 import './Popup.css'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Map(){
     const popup = useRef(null)
@@ -8,6 +10,7 @@ export default function Map(){
     const [status, setStatus] = useState("")
     const [price, setPrice] = useState(0)
     const [plotNumber, setPlotNumber] = useState(0)
+    const [csrfToken, setCsrfToken] = useState(null)
 
     // const [plots, setPlots] = useState(0)
 
@@ -26,6 +29,23 @@ export default function Map(){
     // useEffect(() => {
     //     fetchContent()
     // }, [])
+
+    
+
+    useEffect(() => {
+        async function getCsrfToken() {
+            if (csrfToken === null) {
+              const response = await fetch(`/api/v1/csrf`, {
+                withCredentials: true,
+              });
+              const data = await response.json();
+              let c = data.csrfToken;
+              setCsrfToken(c);
+            }
+        }
+
+        getCsrfToken()
+    }, [])
 
     const [plotInfo, setPlotInfo] = useState({
         "2182":{price:999999, square:"9 соток", status:"sold"},
@@ -216,8 +236,47 @@ export default function Map(){
         popup.current.classList.remove('open')
     }
 
-    function handleEntry(){
-        
+    async function handleEntry(e){
+        e.preventDefault()
+        let name = popup.current.querySelector(".Popup-inputName").value
+        let phone = popup.current.querySelector(".Popup-inputPhone").value
+        var phoneo = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
+        if(name === "" || phone ===""){
+            toast.error("Пожалуйста, заполните все необходимые поля.", {
+                theme: 'colored'
+            })
+        } else if (phone.match(phoneo) == null){
+            toast.error("Пожалуйста, введите корректный номер телефона.", {
+                theme: 'colored'
+            })
+        } else {
+            let respone = await fetch('/api/v1/plots/sign', {
+                withCredentials: true,
+                method: 'POST',
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": csrfToken
+                },
+                body: JSON.stringify({ 
+                    "plot": plotNumber,
+                    "name": name,
+                    "phone": phone
+                })
+            })
+            let text = await respone.text()
+
+            if(text === "Success"){
+                toast.success("Спасибо! Вам перезвонят в ближайшее время.", {
+                    theme: 'colored'
+                })
+                popup.current.querySelector(".Popup-inputName").value = ""
+                popup.current.querySelector(".Popup-inputPhone").value = ""
+                closePopup()
+            }
+        }
+
+
     }
 
     return (
@@ -228,7 +287,7 @@ export default function Map(){
                     <div className='Map-imageWrapper'>
                         <img className='Map-image' src={process.env.PUBLIC_URL + '/images/map.png'} draggable="false" alt="map"></img>
                         <img className="Map-numbers" src={process.env.PUBLIC_URL + '/images/numbers.png'} alt="numbers"></img>
-                        <div className='Map-popUp Popup' ref={popup}>
+                        <form className='Map-popUp Popup' ref={popup} onSubmit={handleEntry}>
                             <div className='Popup-content'>
                                 <div className='Popup-close' onClick={closePopup}></div>
                                 <div className='Popup-title'>
@@ -241,9 +300,9 @@ export default function Map(){
                                 <div className='Popup-square Popup-description'>Площадь:&nbsp;<div className='Popup-variable'>{square.toString().replace(".00", "")} сот.</div></div>
                                 <input className={'Popup-inputName Popup-input ' + status} placeholder='Как к вам обращаться?'/>
                                 <input className={'Popup-inputPhone Popup-input ' + status} placeholder='Мобильный телефон'/>
-                                <button className={'Popup-sendButton Popup-input ' + status} onClick={handleEntry}>Записаться на просмотр</button>
+                                <button className={'Popup-sendButton Popup-input ' + status} type='submit'>Записаться на просмотр</button>
                             </div>
-                        </div>
+                        </form>
                         <svg viewBox="0 0 1600 700" className='Map-svgContainer' onClick={handleMapClick}>
                             <path data-idx="2182" className={plotInfo["2182"]?.status} d="M 312.701 351.305 L 300.956 361.895 L 301.341 431.018 L 360.837 415.037 L 359.49 339.367 L 312.701 351.305 Z"></path>
                             <path data-idx="2183" className={plotInfo["2183"]?.status} d="M 360.272 339.018 L 361.808 414.81 L 426.138 396.667 L 421.49 323.853 L 360.272 339.018 Z"></path>

@@ -9,6 +9,7 @@ import Footer from './Footer/Footer';
 import Places from './Places/Places'
 import Consultation from './Consultation/Consultation';
 import News from './News/News'
+import { ToastContainer }  from 'react-toastify';
 
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
           <News></News>
           <Consultation></Consultation>
           <Footer></Footer>
+          <ToastContainer icon={false}></ToastContainer>
         </div>
+        
     </div>
   );
 }
