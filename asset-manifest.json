@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.5e8bf982.css",
-    "main.js": "./static/js/main.490846b4.js",
+    "main.css": "./static/css/main.d77ac53d.css",
+    "main.js": "./static/js/main.a7050dde.js",
     "static/js/787.e37e3bb7.chunk.js": "./static/js/787.e37e3bb7.chunk.js",
     "static/media/Montserrat-ExtraBoldItalic.ttf": "./static/media/Montserrat-ExtraBoldItalic.f1339c93d10b93cea387.ttf",
     "static/media/Montserrat-ExtraLightItalic.ttf": "./static/media/Montserrat-ExtraLightItalic.1a2a89144b092e0df03f.ttf",
@@ -39,6 +39,8 @@
     "static/media/Montserrat-ExtraLight.woff": "./static/media/Montserrat-ExtraLight.7d5b29a7a7a3e4712259.woff",
     "static/media/Montserrat-Black.woff": "./static/media/Montserrat-Black.db333926b4f3bb0aa215.woff",
     "static/media/Montserrat-Thin.woff": "./static/media/Montserrat-Thin.d2f89d58c160e73f2a32.woff",
+    "static/media/Pochaevsk-Ucs-SpacedOut.eot": "./static/media/Pochaevsk-Ucs-SpacedOut.0c4e51620b61d401f3d0.eot",
+    "static/media/Pochaevsk-Ucs-SpacedOut.ttf": "./static/media/Pochaevsk-Ucs-SpacedOut.0e5e7f957b705b1d033b.ttf",
     "static/media/Montserrat-ExtraBoldItalic.woff2": "./static/media/Montserrat-ExtraBoldItalic.8b9fbc813c539badd1c5.woff2",
     "static/media/Montserrat-BoldItalic.woff2": "./static/media/Montserrat-BoldItalic.f90c1047271873c29f87.woff2",
     "static/media/Montserrat-SemiBoldItalic.woff2": "./static/media/Montserrat-SemiBoldItalic.a95d02b901719ce9c139.woff2",
@@ -57,15 +59,15 @@
     "static/media/Montserrat-ThinItalic.woff2": "./static/media/Montserrat-ThinItalic.0f05b75f85e78a138259.woff2",
     "static/media/Montserrat-Black.woff2": "./static/media/Montserrat-Black.c5c7d3b1e7e56c8228dc.woff2",
     "static/media/Montserrat-Thin.woff2": "./static/media/Montserrat-Thin.b50a1758e4f607d93111.woff2",
-    "static/media/CyrillicOldFace.woff": "./static/media/CyrillicOldFace.b07a04bb26fd86960fe8.woff",
-    "static/media/CyrillicOldFace.woff2": "./static/media/CyrillicOldFace.429e3c36a620d6ee9013.woff2",
+    "static/media/Pochaevsk-Ucs-SpacedOut.woff": "./static/media/Pochaevsk-Ucs-SpacedOut.5049f24c3ea9d37b6409.woff",
+    "static/media/Pochaevsk-Ucs-SpacedOut.woff2": "./static/media/Pochaevsk-Ucs-SpacedOut.ea5490b302ccb90ee9a2.woff2",
     "index.html": "./index.html",
-    "main.5e8bf982.css.map": "./static/css/main.5e8bf982.css.map",
-    "main.490846b4.js.map": "./static/js/main.490846b4.js.map",
+    "main.d77ac53d.css.map": "./static/css/main.d77ac53d.css.map",
+    "main.a7050dde.js.map": "./static/js/main.a7050dde.js.map",
     "787.e37e3bb7.chunk.js.map": "./static/js/787.e37e3bb7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e8bf982.css",
-    "static/js/main.490846b4.js"
+    "static/css/main.d77ac53d.css",
+    "static/js/main.a7050dde.js"
   ]
 }
