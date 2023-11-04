@@ -1,90 +1,85 @@
 .Header {
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    height: var(--header-height);
-    background-color: var(--header-background-color);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    z-index: 9999;
-    color: var(--header-text-color);
-    transition: all 0.2s;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--header-background-color);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  z-index: 9999;
+  color: var(--header-text-color);
+  transition: all 0.2s;
 }
 
-.Header-content{
-    width: 90%;
-    max-width: 1100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    height: inherit;
-    font-size: 14px;
-    font-weight: 500;
+.Header-content {
+  width: 90%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  height: inherit;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.Header-navIcon{
-    width: 0px;
-    height: 0px;
-    display: none;
-    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+.Header-navIcon {
+  width: 0px;
+  height: 0px;
+  display: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
+@media screen and (max-width: 1350px) {
+  .Header.open {
+    background-color: rgb(255, 255, 255);
+    transition: all 0.4s cubic-bezier(0.5, 0.6, 0.4, 1.02);
+    height: 100%;
+  }
 
-@media screen and (max-width: 900px) {
-    .Header.open{
-        background-color: rgb(255, 255, 255);
-        transition: all 0.4s  cubic-bezier(0.5, 0.6, 0.4, 1.02);
-        height: 100%;
-    }
+  .Header-navIcon {
+    cursor: pointer;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    transition: all 0.25s;
+    display: block;
+  }
 
-    .Header-navIcon {
-        cursor: pointer;
-        position: absolute;
-        width: 48px;
-        height: 48px;
-        transition: all 0.25s;
-        display: block;
-      }
-      
-      .Header-navIconTop-bun,
-      .Header-navIconBottom-bun {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 15px;
-        width: 20px;
-        height: 1px;
-        background: #000000;
-        transform: rotate(0);
-        transition: all 0.1s  cubic-bezier(0.5, 0.6, 0.4, 1.02);
-      }
-      
-      .Header-navIconTop-bun {
-        top: 23px;
-        transform: translateY(-4px);
-      }
-      
-      .Header-navIconBottom-bun {
-        bottom: 23px;
-        transform: translateY(4px);
-      }
-      
-      .Header-navIcon.open {
-        transform: rotate(90deg);
-      }
-      
-      .Header-navIcon.open .Header-navIconTop-bun {
-        transform: 
-          rotate(45deg) 
-          translateY(0px);
-      }
-      
-      .Header-navIcon.open .Header-navIconBottom-bun {
-        transform: 
-          rotate(-45deg) 
-          translateY(0px);
-      }
+  .Header-navIconTop-bun,
+  .Header-navIconBottom-bun {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 15px;
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    transform: rotate(0);
+    transition: all 0.1s cubic-bezier(0.5, 0.6, 0.4, 1.02);
+  }
+
+  .Header-navIconTop-bun {
+    top: 23px;
+    transform: translateY(-4px);
+  }
+
+  .Header-navIconBottom-bun {
+    bottom: 23px;
+    transform: translateY(4px);
+  }
+
+  .Header-navIcon.open {
+    transform: rotate(90deg);
+  }
+
+  .Header-navIcon.open .Header-navIconTop-bun {
+    transform: rotate(45deg) translateY(0px);
+  }
+
+  .Header-navIcon.open .Header-navIconBottom-bun {
+    transform: rotate(-45deg) translateY(0px);
+  }
 }

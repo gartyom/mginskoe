@@ -1,32 +1,27 @@
-.Phone{
-    height: fit-content;
-    width: 400px;
-    height: 48px;
-    font-size: 14px;
-    font-weight: 500;
-    position: relative;
-    top: 0;
-    display: flex;
-    justify-content: right;
-    align-items: center;
+.Phone {
+  height: fit-content;
+  width: 400px;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
-.Phone-number{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    cursor: pointer;
-    color:  var(--main-text-color);
-    text-decoration: none;
-    
+.Phone-number {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  color: var(--main-text-color);
+  text-decoration: underline;
 }
 
-.Phone-numberIcon{
-    width: 28px;
-    height: 28px;
-}
-
-.Phone-numberText{
-    
+.Phone-numberIcon {
+  width: 28px;
+  height: 28px;
 }

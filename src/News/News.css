@@ -1,45 +1,54 @@
-.News{
-    height: fit-content;
-    scroll-margin-top: calc(var(--header-height) + 10px);
-    width: calc(100% - 40px);
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
+.News {
+  height: fit-content;
+  scroll-margin-top: calc(var(--header-height) + 10px);
+  width: calc(100% - 40px);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-.News-content{
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.News-content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.News-title{
-    position: relative;
-    font-size: calc(18px + 3vmin);
-    font-weight: 700;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+.News-title {
+  position: relative;
+  font-size: calc(28px + 3vmin);
+  font-family: "Cyrillic Old Face";
+  font-weight: 500;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1;
+  padding-bottom: 10px;
 }
 
-.News-container{
-    margin-top: 20px;
-    width: fit-content;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-x: auto;
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    height: fit-content;
+.News-container {
+  margin-top: 20px;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  height: fit-content;
 }
 
-.News-container::-webkit-scrollbar{
-    display: none;
+.News-container::-webkit-scrollbar {
+  display: none;
 }
 
+.News-empty {
+  font-size: calc(12px + 3vmin);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  font-weight: 600;
+}

@@ -1,110 +1,108 @@
-.Map{
-    height: fit-content;
-    scroll-margin-top: calc(var(--header-height) + 10px);
-    width: 100%;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
+.Map {
+  height: fit-content;
+  scroll-margin-top: calc(var(--header-height) + 10px);
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-.Map-content{
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
+.Map-content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.Map-title{
-    position: relative;
-    font-size: calc(18px + 3vmin);
-    font-weight: 700;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+.Map-title {
+  position: relative;
+  font-size: calc(28px + 3vmin);
+  font-weight: 500;
+  font-family: "Cyrillic Old Face";
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1;
+  padding-bottom: 10px;
 }
 
-.Map-container{
-    margin-top: 10px;
-    height: 700px;
-    width: 100%;
-    max-width: 1600px;
-    position: relative;
-    align-items: center;
-    overflow-x: scroll;
-    -ms-overflow-style: none;  
-    scrollbar-width: none; 
+.Map-container {
+  margin-top: 10px;
+  height: 700px;
+  width: 100%;
+  max-width: 1600px;
+  position: relative;
+  align-items: center;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.Map-image{
-    width: auto;
-    height: 100%;
-    object-fit:contain;
-    image-rendering: auto;
-    position: absolute;
-    z-index: -9999;
+.Map-image {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: auto;
+  position: absolute;
+  z-index: -9999;
 }
 
 .Map-container::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-.Map-numbers{
-    width: auto;
-    height: 100%;
-    object-fit:contain;
-    image-rendering: auto;
-    position: absolute;
-    z-index: -99;
+.Map-numbers {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: auto;
+  position: absolute;
+  z-index: -99;
 }
 
-.Map-numbers{
-    opacity: 0.5;
+.Map-numbers {
+  opacity: 0.5;
 }
 
-path{
-    stroke: rgb(255, 255, 255); 
-    fill: rgb(72, 255, 0); 
-    fill-opacity: 0.2;
-    stroke-opacity: 0;
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+path {
+  stroke: rgb(255, 255, 255);
+  fill: rgb(72, 255, 0);
+  fill-opacity: 0.2;
+  stroke-opacity: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-path.free{
-    fill: rgb(72, 255, 0); 
+path.free {
+  fill: rgb(72, 255, 0);
 }
 
-path.booked{
-    fill: rgb(251, 255, 0); 
+path.booked {
+  fill: rgb(251, 255, 0);
 }
 
-path.sold{
-    fill: rgb(255, 0, 0); 
+path.sold {
+  fill: rgb(255, 0, 0);
 }
 
-path:hover{
-    fill-opacity: 0.4;
+path:hover {
+  fill-opacity: 0.4;
 }
 
-.Map-svgContainer{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 700px;
+.Map-svgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 700px;
 }
-
-
 
 @media screen and (max-width: 550px) {
-    .Map-svgContainer{
-        height: 500px;
-    }
+  .Map-svgContainer {
+    height: 500px;
+  }
 
-    .Map-container{
-        height: 500px;
-    }
+  .Map-container {
+    height: 500px;
+  }
 }
-  

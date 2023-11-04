@@ -1,92 +1,91 @@
-.NewsCard{
-    height: 300px;
-    border-radius: 20px;
-    min-width: 300px;
-    max-width: 300px;
-    overflow: hidden;
-    color: white;
-    opacity: 1;
-    position: relative;
-    cursor: pointer;
-    
+.NewsCard {
+  height: 300px;
+  border-radius: 10px;
+  min-width: 300px;
+  max-width: 300px;
+  overflow: hidden;
+  color: white;
+  opacity: 1;
+  position: relative;
+  cursor: pointer;
 }
 
-.NewsCard-imageWrapper{
-    background-color: black;
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    z-index: -10;
-    top: -10px;
+.NewsCard-imageWrapper {
+  background-color: black;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  z-index: -10;
+  top: -10px;
 }
 
-.NewsCard-image{
-    opacity: 0.5;
-    height: 310px;
+.NewsCard-image {
+  opacity: 0.5;
+  height: 310px;
 }
 
-.NewsCard-title{
-    position: relative;
-    top: 20px;
-    left: 20px;
-    width: fit-content;
-    font-size: 24px;
-    font-weight: 700;
+.NewsCard-title {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: fit-content;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-.NewsCard-textContainer{
-    position: absolute;
-    top: 250px;
-    font-size: 20px;
-    border-radius: 20px;
-    z-index: 99;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    height: 100%;
-    transition: all 0.5s cubic-bezier(0.5, 0.6, 0.4, 1.02);
+.NewsCard-textContainer {
+  position: absolute;
+  top: 250px;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 100%;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.5, 0.6, 0.4, 1);
 }
 
-.NewsCard.open .NewsCard-textContainer{
-    top: 0px;
-    transition: all 0.5s cubic-bezier(0.5, 0.6, 0.4, 1.02);
+.NewsCard.open .NewsCard-textContainer {
+  top: 0px;
+  transition: all 0.2s cubic-bezier(0.5, 0.6, 0.4, 1);
 }
 
-.NewsCard-textIcon{
-    position: relative;
-    width: 32px;
-    height: 32px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url('/public/icons/up-arrow-black.png');
-    background-size: contain;
-    cursor: pointer;
+.NewsCard-textIcon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("/public/icons/up-arrow-black.png");
+  background-size: contain;
+  cursor: pointer;
 }
 
-.NewsCard.open .NewsCard-textIcon{
-    width: 32px;
-    height: 32px;
-    background-image: url('/public/icons/down-arrow-black.png');
+.NewsCard.open .NewsCard-textIcon {
+  width: 32px;
+  height: 32px;
+  background-image: url("/public/icons/down-arrow-black.png");
 }
-
 
 .NewsCard.open {
-    top: 0px;
-    transition: all 0.3s cubic-bezier();
+  top: 0px;
+  transition: all 0.3s cubic-bezier();
 }
 
-.NewsCard-date{
-    position: relative;
-    top: 20px;
-    left: 20px;
-    font-size: 16px;
-    width: fit-content;
-    font-weight: 500;
+.NewsCard-date {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  font-size: 16px;
+  width: fit-content;
+  font-weight: 500;
 }
 
-.NewsCard-text{
-    color: var(--main-text-color);
-    width: calc(100% - 20px);
-    margin-left: auto;
-    margin-right: auto;
+.NewsCard-text {
+  color: var(--main-text-color);
+  width: calc(100% - 20px);
+  margin-left: auto;
+  margin-right: auto;
 }

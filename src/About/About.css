@@ -1,57 +1,58 @@
-.About{
-   color: var(--main-text-color);
-   height: var(--section-height);
-   scroll-margin-top: calc(var(--header-height) + 11px);
+.About {
+  color: var(--main-text-color);
+  height: var(--section-height);
+  scroll-margin-top: calc(var(--header-height) + 11px);
 }
 
-.About-content{
-    max-width: var(--content-max-width);
-    height: 100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    position: relative;
-    
+.About-content {
+  max-width: var(--content-max-width);
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  position: relative;
 }
 
-.About-background{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.About-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
-.About-title{
-    color: white;
-    font-size: calc(18px + 3vmin);
-    font-weight: 700;
+.About-title {
+  color: white;
+  font-size: calc(28px + 3vmin);
+  font-family: "Cyrillic Old Face";
+  font-weight: 500;
+  line-height: 1;
+  padding-bottom: 10px;
 }
 
-.About-description{
-    text-align: center;
-    font-size: calc(8px + 1.5vmin);
-    z-index: 99;
-    color: white;
-    position: relative;
-    max-width: 900px;
-    width: 90%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 45%;
-    
+.About-description {
+  text-align: center;
+  font-size: calc(8px + 1.5vmin);
+  z-index: 99;
+  color: white;
+  position: relative;
+  max-width: 900px;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 45%;
 }
 
-.About-text{
-    margin-top: 10px;
+.About-text {
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 800px) {
-    .About{
-        height: 400px;
-    }
+  .About {
+    height: 400px;
+  }
 }

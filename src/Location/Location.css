@@ -1,90 +1,118 @@
-.Location{
-    width: 100%;
+.Location {
+  width: 100%;
+  height: fit-content;
+  scroll-margin-top: calc(var(--header-height) + 10px);
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.ymap-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  height: 600px;
+}
+
+.Location-content {
+  height: 100%;
+  width: calc(100% - 40px);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.Location-text {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.01);
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.Location-title {
+  font-size: calc(28px + 3vmin);
+  font-family: "Cyrillic Old Face";
+  font-weight: 500;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.Location-description {
+  font-size: calc(13px + 1vmin);
+  font-weight: 300;
+}
+
+.Location-mapFrame {
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+}
+
+.Location-list {
+  margin-top: 20px;
+}
+
+.Location-listItem {
+  list-style: none;
+  background-position: left center;
+  background-image: url("/public/icons/right-arrow.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .Location-content {
+    flex-direction: column;
+  }
+
+  .Location {
     height: fit-content;
-    scroll-margin-top: calc(var(--header-height) + 10px);
-    max-width: var(--content-max-width);
+  }
+
+  .Location-bgImage-1 {
+    top: 50px;
+    left: -100px;
+  }
+
+  .Location-bgImage-2 {
+    top: -10px;
+    right: -20px;
+    width: 300px;
+    height: auto;
+    background-size: cover;
+  }
+
+  .ymap-wrapper {
+    width: 100%;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
-}
+  }
 
-.Location-content{
-    height: 100%;
-    width: calc(100% - 40px);
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between;
-}
-
-.Location-mapContainer{
+  .Location-text {
     width: 100%;
-    height: 600px;
-}
+    margin-bottom: 15px;
+    padding-top: 5px;
+  }
 
-.Location-text{
-    width: 100%;
-}
-
-.Location-title{
-    font-size: calc(18px + 3vmin);
-    font-weight: 700;
-}
-
-.Location-description{
-    font-size: calc(13px + 1vmin);
-    font-weight: 300;
-    margin-top: 20px;
-}
-
-.Location-mapFrame{
-   margin-top: 10px;
-    height: 100%;
-    width: 100%;
-}
-
-.Location-list{
-    margin-top: 20px;
-}
-
-.Location-listItem{
-    list-style: none;
-    background-position: left center;
-    background-image: url('/public/icons/right-arrow.png');
-    background-size: 24px;
+  .Location-listItem {
+    background-size: 16px;
     background-repeat: no-repeat;
-    padding-left: 30px;
+    padding-left: 22px;
+  }
+
+  .Location-description {
     margin-top: 10px;
-}
-
-@media screen and (max-width:800px) {
-    .Location-content{
-        flex-direction: column;
-    }
-
-    .Location{
-        height: fit-content;
-    }
-
-    .Location-mapContainer{
-        width: 100%;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .Location-text{
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .Location-listItem{
-        background-size: 16px;
-        background-repeat: no-repeat;
-        padding-left: 22px;
-    }
-
-    .Location-description{
-        margin-top: 10px;
-    }
-    
+  }
 }

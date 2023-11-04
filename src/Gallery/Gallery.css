@@ -1,87 +1,74 @@
-.Gallery{
-    width: 100%;
-    height: fit-content;
-    scroll-margin-top: calc(var(--header-height) + 10px);
+.Gallery {
+  width: 100%;
+  height: fit-content;
+  scroll-margin-top: calc(var(--header-height) + 10px);
 }
 
-.Gallery-title{
-    position: relative;
-    font-size: calc(18px + 3vmin);
-    font-weight: 700;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 10px;
+.Gallery-title {
+  position: relative;
+  font-size: calc(28px + 3vmin);
+  font-weight: 500;
+  font-family: "Cyrillic Old Face";
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  line-height: 1;
+  padding-bottom: 10px;
 }
 
-.Gallery-videoContainer{
-    width: 100%;
-    max-width: 1100px;
-    height: fit-content;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;    
+.Gallery-videoContainer {
+  width: 100%;
+  max-width: 1100px;
+  height: fit-content;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.Gallery-video{
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 100%;
+.Gallery-video {
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 100%;
 }
 
-
-.Gallery-content{
-    max-width: fit-content;
-    width: 100%;
-    height: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
+.Gallery-content {
+  max-width: fit-content;
+  width: 100%;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.Gallery-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+.Gallery-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
 }
 
-.Gallery-card{
-    width: 100%;
-    background-color: black;
-    max-width: 350px;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
+.Gallery-card {
+  width: 100%;
+  background-color: black;
+  max-width: 350px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.Gallery-img{
-    width: 100%;
-    height: auto;
-    flex-shrink: 0;
-    object-fit:contain;
-    
+.Gallery-img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
-@media screen and (min-width: 751px){
-    .Gallery-img:hover{
-        opacity: 0.6;
-    }
+@media screen and (max-width: 700px) {
+  .Gallery-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-@media screen and (max-width: 750px){
-    .Gallery-cards{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .Gallery-card{
-        width: 100%;
-        max-width: 750px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-

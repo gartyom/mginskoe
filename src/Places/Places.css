@@ -1,100 +1,113 @@
-.Places{
-    height: fit-content;
-    scroll-margin-top: calc(var(--header-height) + 11px);
-    max-width: 1600px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    color: #1b1f1b;
-}
- 
-.Places-content{
-    width: calc(100% - 40px);
-    max-width: 1100px;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 20px;
+.Places {
+  height: fit-content;
+  scroll-margin-top: calc(var(--header-height) + 11px);
+  max-width: 1600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1b1f1b;
 }
 
-.Places-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    padding-bottom: 30px;
+.Places-content {
+  width: calc(100% - 40px);
+  max-width: 1100px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  position: relative;
+}
+.Places-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  padding-bottom: 30px;
 }
 
-.Places-title{
-    position: relative;
-    font-size: calc(18px + 3vmin);
-    font-weight: 700;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 10px;
+.Places-title {
+  position: relative;
+  font-size: calc(28px + 3vmin);
+  font-family: "Cyrillic Old Face";
+  font-weight: 500;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  line-height: 1;
 }
 
-.Places-history{
-    padding-top: 10px;
-    font-size: calc(12px + 1vmin);
+.Places-history {
+  padding-top: 10px;
+  font-size: calc(12px + 1vmin);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
-.Places-historyTitle{
-    font-weight: 600;
-    font-size: calc(13px + 1vmin);
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+.Places-historyTitle {
+  font-size: calc(28px + 3vmin);
+  font-weight: 500;
+  font-family: "Cyrillic Old Face";
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1;
+  padding-bottom: 10px;
 }
 
-.Places-historyList{
-    margin-left: auto;
-    margin-right: auto;
+.Places-historyList {
+  margin-left: 60px;
+  margin-right: auto;
+  padding-bottom: 20px;
 }
 
-.Places-historyListItem{
-    padding-top: 10px;
-    position: relative;
-    width: calc(100% - 50px);
-    margin-left: auto;
-    margin-right: auto;
+.Places-historyListItem {
+  padding-top: 10px;
+  position: relative;
+  width: calc(100% - 50px);
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 @media screen and (max-width: 1200px) {
-    .Places-content{
-        max-width: 700px;
-    }
+  .Places-historyList {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .Places-container{
-        gap: 10px;
-        row-gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .Places-content {
+    max-width: 700px;
+  }
+
+  .Places-container {
+    gap: 10px;
+    row-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 740px) {
-    .Places-container{
-        padding-bottom: 20px;
-    }
+  .Places-container {
+    padding-bottom: 20px;
+  }
 
-    .Places-historyTitle{
-        width: 100%;
-    }
+  .Places-historyTitle {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 560px) {
-    .Places-content{
-        max-width: 700px;
-    }
+  .Places-content {
+    max-width: 700px;
+  }
 
-    .Places-container{
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .Places-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
-
-
-
-
