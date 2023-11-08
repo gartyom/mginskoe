@@ -180,11 +180,8 @@
 
 @font-face {
   font-family: "Cyrillic Old Face";
-  src: url("Pochaevsk-Ucs-SpacedOut.eot");
-  src: url("Pochaevsk-Ucs-SpacedOut.eot?#iefix") format("embedded-opentype"),
-    url("Pochaevsk-Ucs-SpacedOut.woff2") format("woff2"),
-    url("Pochaevsk-Ucs-SpacedOut.woff") format("woff"),
-    url("Pochaevsk-Ucs-SpacedOut.ttf") format("truetype");
+  src: url("Seminaria-Normal.woff2") format("woff2"),
+    url("Seminaria-Normal.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

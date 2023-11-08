@@ -1,6 +1,6 @@
 .News {
   height: fit-content;
-  scroll-margin-top: calc(var(--header-height) + 10px);
+    scroll-margin-top: calc(var(--header-height) * 2 + 10px);
   width: calc(100% - 40px);
   max-width: 1600px;
   margin-left: auto;

@@ -41,9 +41,7 @@
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   color: var(--main-text-color);
-  width: fit-content;
-  height: fit-content;
-  width: 300px;
+  width: 310px;
   height: 310px;
   padding: 20px;
   border-radius: 10px;
@@ -131,9 +129,9 @@
 
 @media screen and (max-width: 550px) {
   .Popup-content {
-    width: 230px;
+    width: 250px;
     height: 230px;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 15px;
     font-weight: 600;
     padding-top: 10px;
@@ -147,8 +145,8 @@
   }
 
   .Popup-sendButton {
-    font-size: 13px;
-    height: 25px;
+    font-size: 14px;
+    height: 30px;
   }
 
   .Popup-close {

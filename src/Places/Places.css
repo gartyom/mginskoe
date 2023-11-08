@@ -1,6 +1,6 @@
 .Places {
   height: fit-content;
-  scroll-margin-top: calc(var(--header-height) + 11px);
+    scroll-margin-top: calc(var(--header-height) * 2 + 10px);
   max-width: 1600px;
   width: 100%;
   margin-left: auto;

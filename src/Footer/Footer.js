@@ -5,7 +5,7 @@ export default function Footer() {
     <div className="Footer">
       <div className="Footer-content">
         <a className="Phone-number" href="tel:+78005005523">
-          <div className="Phone-numberText Footer-phone">+7 800 500 55 23</div>
+          <div className="Phone-numberText Footer-phone">8 800 500 55 23</div>
         </a>
         <a className="Footer-Mail" href="mailto:info@дачное-местечко.рф">
           <div className="Footer-mail">info@дачное-местечко.рф</div>

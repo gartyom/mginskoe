@@ -5,9 +5,57 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   top: 48px;
   display: none;
+}
+
+.GalleryPopup-switch {
+    position: absolute;
+    top: 50%;
+    translate: transformY(-50%);
+    z-index: 9;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.7);
+    cursor: pointer;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.GalleryPopup-prev{
+    left: 20px;
+}
+
+.GalleryPopup-next{
+    right: 20px;
+}
+
+.GalleryPopup-sImage{
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.GalleryPopup-nextImage{
+    transform: rotate(-90deg);
+}
+
+.GalleryPopup-prevImage{
+    transform: rotate(90deg);
+}
+
+.GalleryPopup-gradient{
+    z-index:9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 90%, rgba(0,0,0,0.5) 100%);
 }
 
 .GalleryPopup-content {
@@ -35,6 +83,7 @@
   height: auto;
   object-fit: contain;
   max-width: 1100px;
+  max-height: calc(100vh - 48px - 34px);
   position: relative;
 }
 

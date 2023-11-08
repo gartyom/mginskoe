@@ -48,7 +48,7 @@ export default function Consultation() {
       .send(serviceId, templateId, template_params, publicKey)
       .then((response) => {
         console.log(response.status);
-        if (response.status == 200) {
+        if (response.status === 200) {
           toast.success("Спасибо! Вам перезвонят в ближайшее время.", {
             theme: "colored",
           });

@@ -8,13 +8,14 @@ import Gallery from "./Gallery/Gallery";
 import Footer from "./Footer/Footer";
 import Places from "./Places/Places";
 import Consultation from "./Consultation/Consultation";
-import News from "./News/News";
+import Banner from "./Banner/Banner";
 import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <Banner />
       <div className="App-content">
         <div className="Hello-section">
           <About></About>

@@ -96,12 +96,10 @@
 
 .Place-description.open .Place-mainText {
   max-height: 1000px;
-  transition: all 0.2s linear;
 }
 
 .Place-description.open .Place-openIcon {
   transform: rotate(180deg);
-  transition: all 0.1s linear;
 }
 
 @media screen and (max-width: 1200px) {

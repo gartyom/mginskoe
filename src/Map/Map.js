@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, } from "react";
 import "./Map.css";
 import "./Popup.css";
 import { toast } from "react-toastify";
@@ -11,154 +11,126 @@ export default function Map() {
   const [status, setStatus] = useState("");
   const [price, setPrice] = useState(0);
   const [plotNumber, setPlotNumber] = useState(0);
-  const [csrfToken, setCsrfToken] = useState(null);
 
   const [plots, setPlots] = useState({
-    2182: { price: 999999, square: "9 соток", status: "sold" },
-    2183: { price: 999999, square: "10 соток", status: "free" },
-    2099: { price: 999999, square: "9 соток", status: "free" },
-    2098: { price: 999999, square: "10 соток", status: "free" },
-    2184: { price: 999999, square: "10 соток", status: "free" },
-    2097: { price: 999999, square: "10 соток", status: "free" },
-    2185: { price: 999999, square: "10 соток", status: "free" },
-    2096: { price: 999999, square: "10 соток", status: "booked" },
-    2187: { price: 999999, square: "10 соток", status: "free" },
-    2095: { price: 999999, square: "10 соток", status: "free" },
-    2188: { price: 999999, square: "10 соток", status: "free" },
-    2094: { price: 999999, square: "10 соток", status: "free" },
-    2189: { price: 999999, square: "10 соток", status: "free" },
-    2093: { price: 999999, square: "10 соток", status: "free" },
-    2190: { price: 999999, square: "10 соток", status: "free" },
-    2091: { price: 999999, square: "10 соток", status: "free" },
-    2090: { price: 999999, square: "10 соток", status: "free" },
-    2191: { price: 999999, square: "10 соток", status: "free" },
-    2192: { price: 999999, square: "10 соток", status: "free" },
-    2089: { price: 999999, square: "10 соток", status: "free" },
-    2193: { price: 999999, square: "10 соток", status: "free" },
-    2088: { price: 999999, square: "10 соток", status: "free" },
-    2169: { price: 999999, square: "11 соток", status: "free" },
-    2168: { price: 999999, square: "10 соток", status: "free" },
-    2167: { price: 999999, square: "10 соток", status: "free" },
-    2166: { price: 999999, square: "10 соток", status: "free" },
-    2165: { price: 999999, square: "10 соток", status: "free" },
-    2163: { price: 999999, square: "10 соток", status: "free" },
-    2162: { price: 999999, square: "10 соток", status: "free" },
-    2161: { price: 999999, square: "10 соток", status: "free" },
-    2160: { price: 999999, square: "12 соток", status: "free" },
-    2159: { price: 999999, square: "12 соток", status: "free" },
-    2158: { price: 999999, square: "12 соток", status: "free" },
-    2157: { price: 999999, square: "12 соток", status: "free" },
-    2156: { price: 999999, square: "12 соток", status: "free" },
-    2155: { price: 999999, square: "12 соток", status: "free" },
-    2154: { price: 999999, square: "12 соток", status: "free" },
-    2151: { price: 999999, square: "12 соток", status: "free" },
-    2152: { price: 999999, square: "10 соток", status: "free" },
-    2150: { price: 999999, square: "12 соток", status: "free" },
-    2149: { price: 999999, square: "10 соток", status: "free" },
-    2147: { price: 999999, square: "12,6 соток", status: "free" },
-    2148: { price: 999999, square: "9 соток", status: "free" },
-    2146: { price: 999999, square: "12 соток", status: "free" },
-    2145: { price: 999999, square: "12 соток", status: "free" },
-    2144: { price: 999999, square: "12 соток", status: "free" },
-    2143: { price: 999999, square: "12 соток", status: "free" },
-    2141: { price: 999999, square: "12 соток", status: "free" },
-    2140: { price: 999999, square: "8 соток", status: "free" },
-    2138: { price: 999999, square: "9,5 соток", status: "free" },
-    2139: { price: 999999, square: "11,4 соток", status: "free" },
-    2137: { price: 999999, square: "12 соток", status: "free" },
-    2135: { price: 999999, square: "8 соток", status: "free" },
-    2136: { price: 999999, square: "8 соток", status: "free" },
-    2134: { price: 999999, square: "8 соток", status: "free" },
-    2133: { price: 999999, square: "8 соток", status: "free" },
-    2132: { price: 999999, square: "12 соток", status: "free" },
-    2130: { price: 999999, square: "12 соток", status: "free" },
-    2123: { price: 999999, square: "12 соток", status: "free" },
-    2124: { price: 999999, square: "9 соток", status: "free" },
-    2125: { price: 999999, square: "9 соток", status: "free" },
-    2126: { price: 999999, square: "9 соток", status: "free" },
-    2127: { price: 999999, square: "9 соток", status: "free" },
-    2128: { price: 999999, square: "8 соток", status: "free" },
-    2129: { price: 999999, square: "8 соток", status: "free" },
-    2122: { price: 999999, square: "9,6 соток", status: "free" },
-    2121: { price: 999999, square: "8 соток", status: "free" },
-    2119: { price: 999999, square: "8 соток", status: "free" },
-    2118: { price: 999999, square: "8 соток", status: "free" },
-    2117: { price: 999999, square: "8 соток", status: "free" },
-    2116: { price: 999999, square: "8 соток", status: "free" },
-    2115: { price: 999999, square: "8 соток", status: "free" },
-    2114: { price: 999999, square: "8,35 соток", status: "free" },
-    2113: { price: 999999, square: "10 соток", status: "free" },
-    2103: { price: 999999, square: "8 соток", status: "free" },
-    2092: { price: 999999, square: "8 соток", status: "free" },
-    2081: { price: 999999, square: "8 соток", status: "free" },
-    2197: { price: 999999, square: "8 соток", status: "free" },
-    2186: { price: 999999, square: "8 соток", status: "free" },
-    2175: { price: 999999, square: "8 соток", status: "free" },
-    2164: { price: 999999, square: "8 соток", status: "free" },
-    2153: { price: 999999, square: "8 соток", status: "free" },
-    2142: { price: 999999, square: "8 соток", status: "free" },
-    2131: { price: 999999, square: "8 соток", status: "free" },
-    2120: { price: 999999, square: "8 соток", status: "free" },
-    2109: { price: 999999, square: "8 соток", status: "free" },
-    2087: { price: 999999, square: "10 соток", status: "free" },
-    2194: { price: 999999, square: "10 соток", status: "free" },
-    2195: { price: 999999, square: "10 соток", status: "free" },
-    2086: { price: 999999, square: "10 соток", status: "free" },
-    2196: { price: 999999, square: "10 соток", status: "free" },
-    2085: { price: 999999, square: "10 соток", status: "free" },
-    2198: { price: 999999, square: "10 соток", status: "free" },
-    2084: { price: 999999, square: "10 соток", status: "free" },
-    2199: { price: 999999, square: "10 соток", status: "free" },
-    2083: { price: 999999, square: "10 соток", status: "free" },
-    2200: { price: 999999, square: "10 соток", status: "free" },
-    2082: { price: 999999, square: "10 соток", status: "free" },
-    2201: { price: 999999, square: "10 соток", status: "free" },
-    2202: { price: 999999, square: "10 соток", status: "free" },
-    2207: { price: 999999, square: "10 соток", status: "free" },
-    2206: { price: 999999, square: "10 соток", status: "free" },
-    2205: { price: 999999, square: "10 соток", status: "free" },
-    2204: { price: 999999, square: "8 соток", status: "free" },
-    2203: { price: 999999, square: "10 соток", status: "free" },
-    2181: { price: 999999, square: "9 соток", status: "free" },
-    2180: { price: 999999, square: "10 соток", status: "free" },
-    2179: { price: 999999, square: "9 соток", status: "free" },
-    2170: { price: 999999, square: "8 соток", status: "free" },
-    2178: { price: 999999, square: "9 соток", status: "free" },
-    2171: { price: 999999, square: "8 соток", status: "free" },
-    2177: { price: 999999, square: "9 соток", status: "free" },
-    2172: { price: 999999, square: "8 соток", status: "free" },
-    2176: { price: 999999, square: "9 соток", status: "free" },
-    2174: { price: 999999, square: "10 соток", status: "free" },
-    2173: { price: 999999, square: "9 соток", status: "free" },
+    2182: { price: 80000, square: "9 ", status: "sold" },
+    2183: { price: 80000, square: "10 ", status: "free" },
+    2099: { price: 80000, square: "9 ", status: "free" },
+    2098: { price: 80000, square: "10 ", status: "free" },
+    2184: { price: 80000, square: "10 ", status: "free" },
+    2097: { price: 80000, square: "10 ", status: "free" },
+    2185: { price: 80000, square: "10 ", status: "free" },
+    2096: { price: 80000, square: "10 ", status: "booked" },
+    2187: { price: 80000, square: "10 ", status: "free" },
+    2095: { price: 80000, square: "10 ", status: "free" },
+    2188: { price: 80000, square: "10 ", status: "free" },
+    2094: { price: 80000, square: "10 ", status: "free" },
+    2189: { price: 80000, square: "10 ", status: "free" },
+    2093: { price: 80000, square: "10 ", status: "free" },
+    2190: { price: 80000, square: "10 ", status: "free" },
+    2091: { price: 80000, square: "10 ", status: "free" },
+    2090: { price: 80000, square: "10 ", status: "free" },
+    2191: { price: 80000, square: "10 ", status: "free" },
+    2192: { price: 80000, square: "10 ", status: "free" },
+    2089: { price: 80000, square: "10 ", status: "free" },
+    2193: { price: 80000, square: "10 ", status: "free" },
+    2088: { price: 80000, square: "10 ", status: "free" },
+    2169: { price: 80000, square: "11 ", status: "free" },
+    2168: { price: 80000, square: "10 ", status: "free" },
+    2167: { price: 80000, square: "10 ", status: "free" },
+    2166: { price: 80000, square: "10 ", status: "free" },
+    2165: { price: 80000, square: "10 ", status: "free" },
+    2163: { price: 80000, square: "10 ", status: "free" },
+    2162: { price: 80000, square: "10 ", status: "free" },
+    2161: { price: 80000, square: "10 ", status: "free" },
+    2160: { price: 80000, square: "12 ", status: "free" },
+    2159: { price: 80000, square: "12 ", status: "free" },
+    2158: { price: 80000, square: "12 ", status: "free" },
+    2157: { price: 80000, square: "12 ", status: "free" },
+    2156: { price: 80000, square: "12 ", status: "free" },
+    2155: { price: 80000, square: "12 ", status: "free" },
+    2154: { price: 80000, square: "12 ", status: "free" },
+    2151: { price: 80000, square: "12 ", status: "free" },
+    2152: { price: 80000, square: "10 ", status: "free" },
+    2150: { price: 80000, square: "12 ", status: "free" },
+    2149: { price: 80000, square: "10 ", status: "free" },
+    2147: { price: 80000, square: "12,6 ", status: "free" },
+    2148: { price: 80000, square: "9 ", status: "free" },
+    2146: { price: 80000, square: "12 ", status: "free" },
+    2145: { price: 80000, square: "12 ", status: "free" },
+    2144: { price: 80000, square: "12 ", status: "free" },
+    2143: { price: 80000, square: "12 ", status: "free" },
+    2141: { price: 80000, square: "12 ", status: "free" },
+    2140: { price: 80000, square: "8 ", status: "free" },
+    2138: { price: 80000, square: "9,5 ", status: "free" },
+    2139: { price: 80000, square: "11,4 ", status: "free" },
+    2137: { price: 80000, square: "12 ", status: "free" },
+    2135: { price: 80000, square: "8 ", status: "free" },
+    2136: { price: 80000, square: "8 ", status: "free" },
+    2134: { price: 80000, square: "8 ", status: "free" },
+    2133: { price: 80000, square: "8 ", status: "free" },
+    2132: { price: 80000, square: "12 ", status: "free" },
+    2130: { price: 80000, square: "12 ", status: "free" },
+    2123: { price: 80000, square: "12 ", status: "free" },
+    2124: { price: 80000, square: "9 ", status: "free" },
+    2125: { price: 80000, square: "9 ", status: "free" },
+    2126: { price: 80000, square: "9 ", status: "free" },
+    2127: { price: 80000, square: "9 ", status: "free" },
+    2128: { price: 80000, square: "8 ", status: "free" },
+    2129: { price: 80000, square: "8 ", status: "free" },
+    2122: { price: 80000, square: "9,6 ", status: "free" },
+    2121: { price: 80000, square: "8 ", status: "free" },
+    2119: { price: 80000, square: "8 ", status: "free" },
+    2118: { price: 80000, square: "8 ", status: "free" },
+    2117: { price: 80000, square: "8 ", status: "free" },
+    2116: { price: 80000, square: "8 ", status: "free" },
+    2115: { price: 80000, square: "8 ", status: "free" },
+    2114: { price: 80000, square: "8,35 ", status: "free" },
+    2113: { price: 80000, square: "10 ", status: "free" },
+    2103: { price: 80000, square: "8 ", status: "free" },
+    2092: { price: 80000, square: "8 ", status: "free" },
+    2081: { price: 80000, square: "8 ", status: "free" },
+    2197: { price: 80000, square: "8 ", status: "free" },
+    2186: { price: 80000, square: "8 ", status: "free" },
+    2175: { price: 80000, square: "8 ", status: "free" },
+    2164: { price: 80000, square: "8 ", status: "free" },
+    2153: { price: 80000, square: "8 ", status: "free" },
+    2142: { price: 80000, square: "8 ", status: "free" },
+    2131: { price: 80000, square: "8 ", status: "free" },
+    2120: { price: 80000, square: "8 ", status: "free" },
+    2109: { price: 80000, square: "8 ", status: "free" },
+    2087: { price: 80000, square: "10 ", status: "free" },
+    2194: { price: 80000, square: "10 ", status: "free" },
+    2195: { price: 80000, square: "10 ", status: "free" },
+    2086: { price: 80000, square: "10 ", status: "free" },
+    2196: { price: 80000, square: "10 ", status: "free" },
+    2085: { price: 80000, square: "10 ", status: "free" },
+    2198: { price: 80000, square: "10 ", status: "free" },
+    2084: { price: 80000, square: "10 ", status: "free" },
+    2199: { price: 80000, square: "10 ", status: "free" },
+    2083: { price: 80000, square: "10 ", status: "free" },
+    2200: { price: 80000, square: "10 ", status: "free" },
+    2082: { price: 80000, square: "10 ", status: "free" },
+    2201: { price: 80000, square: "10 ", status: "free" },
+    2202: { price: 80000, square: "10 ", status: "free" },
+    2207: { price: 80000, square: "10 ", status: "free" },
+    2206: { price: 80000, square: "10 ", status: "free" },
+    2205: { price: 80000, square: "10 ", status: "free" },
+    2204: { price: 80000, square: "8 ", status: "free" },
+    2203: { price: 80000, square: "10 ", status: "free" },
+    2181: { price: 80000, square: "9 ", status: "free" },
+    2180: { price: 80000, square: "10 ", status: "free" },
+    2179: { price: 80000, square: "9 ", status: "free" },
+    2170: { price: 80000, square: "8 ", status: "free" },
+    2178: { price: 80000, square: "9 ", status: "free" },
+    2171: { price: 80000, square: "8 ", status: "free" },
+    2177: { price: 80000, square: "9 ", status: "free" },
+    2172: { price: 80000, square: "8 ", status: "free" },
+    2176: { price: 80000, square: "9 ", status: "free" },
+    2174: { price: 80000, square: "10 ", status: "free" },
+    2173: { price: 80000, square: "9 ", status: "free" },
   });
 
-  // const fetchContent = () => {
-  //   fetch("/api/v1/plots")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       let p = {};
-  //       data.forEach((element) => {
-  //         p = Object.assign({}, p, element);
-  //       });
-  //       setPlots(p);
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   async function getCsrfToken() {
-  //     if (csrfToken === null) {
-  //       const response = await fetch(`/api/v1/csrf`, {
-  //         withCredentials: true,
-  //       });
-  //       const data = await response.json();
-  //       let c = data.csrfToken;
-  //       setCsrfToken(c);
-  //     }
-  //   }
-
-  //   getCsrfToken();
-  //   fetchContent();
-  // }, []);
 
   function setMapStates(event) {
     let id = event.target.getAttribute("data-idx");
@@ -176,8 +148,8 @@ export default function Map() {
     let imageWidth = 1600;
     let imageHeight = 700;
 
-    let popupWidth = 300;
-    let popupHeight = 310;
+    let popupWidth = 315;
+    let popupHeight = 315;
 
     const pathBBox = event.target.getBBox();
     left = Math.round(pathBBox.x + 15 + pathBBox.width / 2);
@@ -189,7 +161,7 @@ export default function Map() {
       imageHeight = imageHeight * matchMeidaFactor;
       left *= matchMeidaFactor;
       top *= matchMeidaFactor;
-      popupWidth = 230;
+      popupWidth = 250;
       popupHeight = 240;
     }
 
@@ -249,7 +221,7 @@ export default function Map() {
       .send(serviceId, templateId, template_params, publicKey)
       .then((response) => {
         console.log(response.status);
-        if (response.status == 200) {
+        if (response.status === 200) {
           toast.success("Спасибо! Вам перезвонят в ближайшее время.", {
             theme: "colored",
           });
@@ -330,7 +302,7 @@ export default function Map() {
                   </div>
                 </div>
                 <div className="Popup-price Popup-description">
-                  Цена:&nbsp;<div className="Popup-variable">{price} руб.</div>
+                  Цена за сотку:&nbsp;<div className="Popup-variable">{price} руб.</div>
                 </div>
                 <div className="Popup-square Popup-description">
                   Площадь:&nbsp;

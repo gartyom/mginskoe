@@ -67,7 +67,7 @@ export default function Header() {
         </div>
         <div className="Phone">
           <a className="Phone-number" href="tel:+78005005523">
-            <div className="Phone-numberText">+7 800 500 55 23</div>
+            <div className="Phone-numberText">8 800 500 55 23</div>
             <img
               className="Phone-numberIcon"
               src={process.env.PUBLIC_URL + "/icons/phone.png"}

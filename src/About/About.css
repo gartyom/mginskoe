@@ -1,7 +1,9 @@
 .About {
-  color: var(--main-text-color);
-  height: var(--section-height);
-  scroll-margin-top: calc(var(--header-height) + 11px);
+    top: calc(var(--header-height));
+    position: relative;
+    color: var(--main-text-color);
+    height: var(--section-height);
+    scroll-margin-top: calc(var(--header-height) * 2 + 11px);
 }
 
 .About-content {
@@ -31,7 +33,6 @@
   font-family: "Cyrillic Old Face";
   font-weight: 500;
   line-height: 1;
-  padding-bottom: 10px;
 }
 
 .About-description {
@@ -44,7 +45,7 @@
   width: 90%;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 45%;
+  top: 40%;
 }
 
 .About-text {

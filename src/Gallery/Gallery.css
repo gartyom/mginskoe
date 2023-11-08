@@ -1,74 +1,94 @@
 .Gallery {
-  width: 100%;
-  height: fit-content;
-  scroll-margin-top: calc(var(--header-height) + 10px);
+    width: 100%;
+    height: fit-content;
+    scroll-margin-top: calc(var(--header-height) * 2 + 10px);
 }
 
 .Gallery-title {
-  position: relative;
-  font-size: calc(28px + 3vmin);
-  font-weight: 500;
-  font-family: "Cyrillic Old Face";
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 10px;
-  line-height: 1;
-  padding-bottom: 10px;
+    position: relative;
+    font-size: calc(28px + 3vmin);
+    font-weight: 500;
+    font-family: "Cyrillic Old Face";
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    line-height: 1;
+    padding-bottom: 10px;
 }
 
 .Gallery-videoContainer {
-  width: 100%;
-  max-width: 1100px;
-  height: fit-content;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
+    width: 100%;
+    max-width: 1100px;
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Gallery-video {
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 100%;
 }
 
 .Gallery-content {
-  max-width: fit-content;
-  width: 100%;
-  height: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
+    max-width: fit-content;
+    width: 100%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .Gallery-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    grid-auto-rows: 1fr;
 }
 
 .Gallery-card {
-  width: 100%;
-  background-color: black;
-  max-width: 350px;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+    height: 100%;
+    max-height: 250px; /*important*/
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .Gallery-img {
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-  object-fit: contain;
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
 }
 
+@media screen and (max-width: 1100px){
+    .Gallery-card{
+        max-height: calc(calc(100vw/3) / 1.33)
+    }
+}
+
+
 @media screen and (max-width: 700px) {
-  .Gallery-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .Gallery-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Gallery-card {
+        max-height: calc(calc(100vw/2) / 1.33)
+    }
+}
+
+
+@media screen and (max-width: 300px){
+    .Gallery-card {
+       
+        max-height: 113px;
+    }
 }
