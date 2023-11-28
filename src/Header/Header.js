@@ -66,7 +66,7 @@ export default function Header() {
           </ul>
         </div>
         <div className="Phone">
-          <a className="Phone-number" href="tel:+78005005523">
+          <a className="Phone-number" href="tel:88005005523">
             <div className="Phone-numberText">8 800 500 55 23</div>
             <img
               className="Phone-numberIcon"

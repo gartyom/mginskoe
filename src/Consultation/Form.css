@@ -1,6 +1,6 @@
 .Form{
     position: absolute;
-    top: calc(50% + 18px + 3vmin);
+    top: calc(50% + 36px);
     left: 50%;
     z-index: 99;
     transform: translate(-50%, -50%);
@@ -29,7 +29,7 @@
 }
 
 .Form-input{
-    font-size: calc(13px + 1vmin);
+    font-size: calc(18px);
     font-weight: 700;
     color: rgb(29,31,29);
     background-color: rgba(0,0,0,0);
@@ -55,7 +55,7 @@
     color: white;
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    font-size: calc(13px + 1vmin);
+    font-size: clamp(14px, calc(13px + 1vmin), 20px);
     font-weight: 700;
 }
 

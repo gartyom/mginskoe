@@ -6,7 +6,7 @@
 
 .Gallery-title {
     position: relative;
-    font-size: calc(28px + 3vmin);
+    font-size: var(--title-font-size);
     font-weight: 500;
     font-family: "Cyrillic Old Face";
     width: fit-content;
@@ -34,7 +34,7 @@
 }
 
 .Gallery-content {
-    max-width: fit-content;
+    max-width: 1100px;
     width: 100%;
     height: fit-content;
     margin-left: auto;
@@ -52,7 +52,8 @@
 
 .Gallery-card {
     height: 100%;
-    max-height: 250px; /*important*/
+    max-width:calc(1100px / 3);
+    max-height:calc(1100px / 5);
     background-color: black;
     display: flex;
     justify-content: center;
@@ -65,12 +66,13 @@
     height: 100%;
     width: 100%;
     flex-shrink: 0;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 1100px){
     .Gallery-card{
-        max-height: calc(calc(100vw/3) / 1.33)
+        max-width: calc(calc(100vw/3));
+        max-height: calc(calc(100vw/3));
     }
 }
 
@@ -81,14 +83,11 @@
     }
 
     .Gallery-card {
-        max-height: calc(calc(100vw/2) / 1.33)
+        max-width: calc(calc(100vw/2));
+        max-height: calc(calc(100vw/2));
+        min-width: 145px;
+        min-height: 145px;
     }
 }
 
 
-@media screen and (max-width: 300px){
-    .Gallery-card {
-       
-        max-height: 113px;
-    }
-}

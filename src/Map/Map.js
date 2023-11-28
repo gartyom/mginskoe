@@ -277,7 +277,7 @@ export default function Map() {
             ></img>
             <img
               className="Map-numbers"
-              src={process.env.PUBLIC_URL + "/images/numbers.png"}
+              src={process.env.PUBLIC_URL + "/images/numbers.webp"}
               alt="numbers"
             ></img>
             <form

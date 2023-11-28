@@ -11,7 +11,7 @@ body {
 
 .background-image {
   content: "";
-  background: url("/public/images/background.jpg");
+  background: url("/public/images/background.webp");
   background-repeat: repeat;
   opacity: 0.1;
   top: 0;

@@ -35,7 +35,7 @@ export default function Places() {
       },
       {
         name: "Река Нева",
-        img: "/images/reka-neva.jpg",
+        img: "/images/reka-neva.webp",
         time: "20 минут",
         icon: "/icons/car.png",
         distance: "~ 14 км",

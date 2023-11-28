@@ -36,13 +36,13 @@
 
 .Footer-phone {
   height: fit-content;
-  font-size: calc(10px + 2vmin);
+  font-size: clamp(11px, calc(10px + 2vmin), 24px);
   font-weight: 700;
 }
 
 .Footer-mail {
   height: fit-content;
-  font-size: calc(10px + 2vmin);
+  font-size: clamp(11px, calc(10px + 2vmin), 24px);
   font-weight: 700;
 }
 

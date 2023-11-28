@@ -20,25 +20,28 @@
 .Places-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 20px;
   padding-bottom: 30px;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Places-title {
-  position: relative;
-  font-size: calc(28px + 3vmin);
-  font-family: "Cyrillic Old Face";
-  font-weight: 500;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 20px;
-  line-height: 1;
+    position: relative;
+
+    font-size: var(--title-font-size);
+    font-family: "Cyrillic Old Face";
+    font-weight: 500;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    line-height: 1;
 }
 
 .Places-history {
   padding-top: 10px;
-  font-size: calc(12px + 1vmin);
+  font-size: clamp(14px, calc(12px + 1vmin), 20px);
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-top: 20px;
   padding-left: 10px;
@@ -49,16 +52,17 @@
 }
 
 .Places-historyTitle {
-  font-size: calc(28px + 3vmin);
-  font-weight: 500;
-  font-family: "Cyrillic Old Face";
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1;
-  padding-bottom: 10px;
+
+    font-size: var(--title-font-size);
+    font-weight: 500;
+    font-family: "Cyrillic Old Face";
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1;
+    padding-bottom: 10px;
 }
 
 .Places-historyList {
@@ -86,8 +90,7 @@
   }
 
   .Places-container {
-    gap: 10px;
-    row-gap: 20px;
+    gap: 60px;
     grid-template-columns: repeat(2, 1fr);
   }
 }

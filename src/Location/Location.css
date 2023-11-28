@@ -37,15 +37,15 @@
 }
 
 .Location-title {
-  font-size: calc(28px + 3vmin);
-  font-family: "Cyrillic Old Face";
-  font-weight: 500;
-  line-height: 1;
-  padding-bottom: 20px;
+    font-size: var(--title-font-size);
+    font-family: "Cyrillic Old Face";
+    font-weight: 500;
+    line-height: 1;
+    padding-bottom: 20px;
 }
 
 .Location-description {
-  font-size: calc(13px + 1vmin);
+  font-size: clamp(14px, calc(13px + 1vmin), 24px);
   font-weight: 300;
 }
 

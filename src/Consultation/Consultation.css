@@ -27,7 +27,7 @@
 }
 
 .Consultation-title {
-  font-size: calc(28px + 3vmin);
+  font-size: var(--title-font-size);
   font-weight: 500;
   font-family: "Cyrillic Old Face";
   top: 170px;

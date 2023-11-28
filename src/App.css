@@ -30,6 +30,7 @@ body{
   --section-height: 600px;  
 
   --nav-border-bottom: rgba(251, 253, 251, 0.5);
+  --title-font-size: clamp(30px, calc(28px + 3vmin), 80px);
 }
 
 :root {

@@ -72,6 +72,7 @@ export default function Consultation() {
         <img
           className="Consultation-background"
           src={process.env.PUBLIC_URL + "/images/consultation.webp"}
+          loading="lazy"
           alt=""
         ></img>
         <form ref={form} type="submit" className="Consultation-form Form">

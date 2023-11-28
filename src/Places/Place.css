@@ -105,10 +105,8 @@
 @media screen and (max-width: 1200px) {
   .Place {
     max-width: 320px;
-  }
 
-  .Place-imageContainer {
-    height: 340px;
+    height: calc(320px * 1.059);
   }
 
   .Place-description {
@@ -128,11 +126,9 @@
 @media screen and (max-width: 740px) {
   .Place {
     max-width: 300px;
+    height: calc(300px * 1.059);
   }
 
-  .Place-imageContainer {
-    height: 340px;
-  }
 
   .Place-description {
     width: 310px;
@@ -155,7 +151,7 @@
   }
 
   .Place-imageContainer {
-    height: 340px;
+    height: calc(270px * 1.059);
   }
 
   .Place-description {
@@ -175,10 +171,7 @@
 @media screen and (max-width: 600px) {
   .Place {
     max-width: 250px;
-  }
-
-  .Place-imageContainer {
-    height: 340px;
+    height: calc(250px * 1.059);
   }
 
   .Place-description {
@@ -198,10 +191,11 @@
 @media screen and (max-width: 560px) {
   .Place {
     max-width: 340px;
+    height: 360px;
   }
 
-  .Place-imageContainer {
-    height: 340px;
+  .Place-imageContainer{
+    height: 360px;
   }
 
   .Place-description {
@@ -222,10 +216,12 @@
 @media screen and (max-width: 450px) {
   .Place {
     max-width: 300px;
-  }
 
-  .Place-imageContainer {
-    height: 340px;
+    height: calc(320px);
+  }
+  .Place-imageContainer{
+    height: 360px;
+    height: calc(300px * 1.059);
   }
 
   .Place-description {
@@ -246,35 +242,11 @@
 @media screen and (max-width: 370px) {
   .Place {
     max-width: 280px;
+    height: calc(320px);
   }
 
-  .Place-imageContainer {
-    height: 340px;
-  }
-
-  .Place-description {
-    width: 290px;
-    left: 5px;
-    bottom: 100px;
-  }
-
-  .Place-text {
-    font-size: 18px;
-  }
-
-  .Place-mainText {
-    font-weight: 400;
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .Place {
-    max-width: 280px;
-  }
-
-  .Place-imageContainer {
-    height: 340px;
+ .Place-imageContainer{
+    height: calc(280px * 1.059);
   }
 
   .Place-description {
@@ -294,12 +266,13 @@
 }
 
 @media screen and (max-width: 330px) {
-  .Place {
-    max-width: 250px;
-  }
+    .Place {
+        height: 280px;
+        max-width: 250px;
+    }
 
-  .Place-imageContainer {
-    height: 340px;
+ .Place-imageContainer{
+      height: calc(250px * 1.059);
   }
 
   .Place-description {
